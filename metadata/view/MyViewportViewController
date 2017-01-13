@@ -1,0 +1,114 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "myviewport",
+        "designer|userClassName": "MyViewportViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "b4cf5a63-a524-4f8c-87a8-2869925a6612",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "node"
+                ],
+                "fn": "getAllChildNodes",
+                "implHandler": [
+                    "var me = this;",
+                    "var allNodes = new Array();",
+                    "if (node == null) {",
+                    "    return [];",
+                    "}",
+                    "",
+                    "if(!node.hasChildNodes()){",
+                    "    return node;",
+                    "}else{",
+                    "    allNodes.push(node);",
+                    "    node.eachChild(function(Mynode){allNodes = allNodes.concat(me.getAllChildNodes(Mynode));});",
+                    "}",
+                    "return allNodes;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getAllChildNodes",
+            "designerId": "2673d667-cc89-4fd8-a1cb-46ea1d479428"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "highlightTerms",
+                "implHandler": [
+                    "var searchValue= this.getViewModel().get('searchText');",
+                    "if (!Ext.isEmpty(searchValue)) {",
+                    "var matchCls = 'x-livesearch-match';",
+                    "var regExpProtect = /\\\\|\\/|\\+|\\\\|\\.|\\[|\\]|\\{|\\}|\\?|\\$|\\*|\\^|\\|/gm;",
+                    "var tagsRe= /<[^>]*>/gm;",
+                    "var tagsProtect= '\\x0f';",
+                    "",
+                    "var searchRegExp = new RegExp(searchValue, 'gi');",
+                    "var indexes = [];",
+                    "var count = 0;",
+                    "var currentIndex = 0;",
+                    "var cell = this.lookup('contentPnl').getEl().down('.x-autocontainer-innerCt');",
+                    "",
+                    "",
+                    "var matches = cell.dom.innerHTML.match(tagsRe);",
+                    "var cellHTML = cell.dom.innerHTML.replace(tagsRe,tagsProtect);",
+                    "",
+                    "// populate indexes array, set currentIndex, and replace wrap matched string in a span",
+                    "cellHTML = cellHTML.replace(searchRegExp, function(m) {",
+                    "    count += 1;",
+                    "    /*",
+                    "    if (Ext.Array.indexOf(indexes, idx) === -1) {",
+                    "        indexes.push(idx);",
+                    "    }",
+                    "    if (currentIndex === null) {",
+                    "        currentIndex = idx;",
+                    "    }",
+                    "    */",
+                    "    return '<span class=\"' + matchCls + '\">' + m + '</span>';",
+                    "});",
+                    "// restore protected tags",
+                    "Ext.each(matches, function(match) {",
+                    "    cellHTML = cellHTML.replace(tagsProtect, match);",
+                    "});",
+                    "// update cell html",
+                    "cell.dom.innerHTML = cellHTML;",
+                    "    ",
+                    "}",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "highlightTerms",
+            "designerId": "fe079da8-e29b-47a2-98b0-f93ee877b62c"
+        }
+    ]
+}

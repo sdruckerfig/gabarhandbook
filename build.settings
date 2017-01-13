@@ -1,0 +1,6 @@
+{
+    "webBuild": {
+        "environment": "production",
+        "publishPath": "/Library/WebServer/Documents/garbarhandbookprod"
+    }
+}

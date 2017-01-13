@@ -1,0 +1,55 @@
+{
+    "name": "gabarhandbook",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.2.1.29",
+            "frameworkVersion": "6.2.1.167"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:63818/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app",
+            "buildPlatform": false
+        }
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "ed99b2fa-74dc-4e63-8a91-ebb4d188332b",
+            "4bf1b08b-2088-4336-97d2-e6ff475f208e",
+            "b4cf5a63-a524-4f8c-87a8-2869925a6612"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "6dfec4b3-7479-467d-8a1c-ff1363337ea3",
+            "af5297fa-577d-4d51-9d81-4b43695ecb70"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

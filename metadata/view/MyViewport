@@ -1,0 +1,578 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "myviewport",
+        "designer|userClassName": "MyViewport",
+        "height": 250,
+        "html": [
+            "<"
+        ],
+        "layout": "border",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto",
+        "html": "object"
+    },
+    "name": "MyViewport",
+    "designerId": "ed99b2fa-74dc-4e63-8a91-ebb4d188332b",
+    "viewControllerInstanceId": "b4cf5a63-a524-4f8c-87a8-2869925a6612",
+    "viewModelInstanceId": "4bf1b08b-2088-4336-97d2-e6ff475f208e",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": false,
+                "flex": 2,
+                "layout|region": "center",
+                "layout|split": true,
+                "reference": "mytree",
+                "rootVisible": false,
+                "store": [
+                    "{TableOfContents}"
+                ],
+                "title": "Table of Contents"
+            },
+            "configAlternates": {
+                "collapsible": "boolean",
+                "flex": "number",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "title": "string",
+                "store": "binding",
+                "reference": "string",
+                "rootVisible": "boolean"
+            },
+            "name": "MyTreePanel",
+            "designerId": "d40395d4-3043-4ecc-9037-2bbf6009ca19",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTreeView",
+                    "designerId": "851ed805-3594-4841-bde9-dc331d905bd6"
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "tooltip": "Expand All",
+                        "type": "expand"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string",
+                        "type": "string"
+                    },
+                    "name": "MyTool",
+                    "designerId": "3c82b15b-f9cc-495e-9411-d520a4fa435d",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "owner",
+                                    "tool",
+                                    "event"
+                                ],
+                                "designer|viewControllerFn": "onExpandAll",
+                                "fn": "callback",
+                                "implHandler": [
+                                    "var store = this.getStore('TableOfContents');",
+                                    "store.getRootNode().expandChildren(true);"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "designer|viewControllerFn": "string",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "callback",
+                            "designerId": "b0fed165-90c3-49a7-9928-5adfee49d1e3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "tooltip": "Collapse All",
+                        "type": "collapse"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string",
+                        "type": "string"
+                    },
+                    "name": "MyTool2",
+                    "designerId": "37857698-9799-4be9-a04a-63362cc8ed2a",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "owner",
+                                    "tool",
+                                    "event"
+                                ],
+                                "designer|viewControllerFn": "onCollapseAll",
+                                "fn": "callback",
+                                "implHandler": [
+                                    "var store = this.getStore('TableOfContents');",
+                                    "store.getRootNode().collapseChildren(true);",
+                                    ""
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "designer|viewControllerFn": "string",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "callback",
+                            "designerId": "ddbb3ab0-9c45-4410-9d3e-a1fa2f58c898"
+                        }
+                    ]
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onTreepanelCheckChange",
+                        "implHandler": [
+                            "var tree = this.lookup('mytree');",
+                            "var nodes = tree.getChecked();",
+                            "var data = [];",
+                            "",
+                            " for (var i=0; i<nodes.length; i++) {",
+                            "",
+                            "     var children = this.getAllChildNodes(nodes[i]);",
+                            "",
+                            "     if (!Ext.isArray(children)) {",
+                            "         children = [children];",
+                            "     }",
+                            "",
+                            "     for (var j=0; j<children.length; j++) {",
+                            "          var found = false;",
+                            "          for (var k=0; k<data.length; k++) {",
+                            "              if (data[k].id == children[j].id) {",
+                            "                  found = true;",
+                            "                  break;",
+                            "              }",
+                            "          }",
+                            "          if (!found) {",
+                            "         data.push({",
+                            "             title: children[j].get('text'),",
+                            "             content: children[j].get('content'),",
+                            "             depth: children[j].get('depth'),",
+                            "             id: children[j].id",
+                            "         });",
+                            "     }",
+                            "     }",
+                            "     tree.setData(data);",
+                            "",
+                            " }",
+                            "this.lookup('contentPnl').setData(data);",
+                            "this.highlightTerms();"
+                        ],
+                        "name": "checkchange",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onTreepanelCheckChange",
+                    "designerId": "b43f6c6b-28c3-4827-8a52-3f474ecc34cc"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onTreepanelSelect",
+                        "implHandler": [
+                            "var tree = this.lookup('mytree');",
+                            "var checkedNodes = tree.getChecked();",
+                            "if (checkedNodes.length == 0) {",
+                            "    var nodes = this.getAllChildNodes(record);",
+                            "    if (Ext.isArray(nodes)) {",
+                            "",
+                            "        var data = [];",
+                            "        for (var i=0; i<nodes.length; i++) {",
+                            "          data.push({",
+                            "              title: nodes[i].get('text'),",
+                            "              content: nodes[i].get('content'),",
+                            "              depth: nodes[i].get('depth')",
+                            "          });",
+                            "        }",
+                            "        this.lookup('contentPnl').setData(data);",
+                            "",
+                            "    } else {",
+                            "        this.lookup('contentPnl').setData([{",
+                            "            title: record.get('text'),",
+                            "            content: record.get('content'),",
+                            "            depth: record.get('depth')",
+                            "        }]);",
+                            "    }",
+                            "    this.highlightTerms();",
+                            "}"
+                        ],
+                        "name": "select",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onTreepanelSelect",
+                    "designerId": "9a4facf3-9c43-4334-8134-b558d4b5c053"
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "tooltip": "Help",
+                        "type": "help"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string",
+                        "type": "string"
+                    },
+                    "name": "MyTool3",
+                    "designerId": "321242c1-7e0a-4c86-b9e6-9e54287ae041"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "collapsible": true,
+                "flex": 3,
+                "layout|region": "east",
+                "layout|split": true,
+                "reference": "contentPnl",
+                "scrollable": true,
+                "title": "Content",
+                "width": 150
+            },
+            "configAlternates": {
+                "collapsible": "boolean",
+                "flex": "number",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "title": "string",
+                "width": "auto",
+                "bodyPadding": "auto",
+                "reference": "string",
+                "scrollable": "auto"
+            },
+            "name": "MyPanel1",
+            "designerId": "714cce22-a9bb-47b4-8534-37ea1c482130",
+            "cn": [
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "type": "print"
+                    },
+                    "configAlternates": {
+                        "type": "string"
+                    },
+                    "name": "MyTool1",
+                    "designerId": "23e5dab4-8a9e-44d8-b170-562b3f17e62d",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "owner",
+                                    "tool",
+                                    "event"
+                                ],
+                                "fn": "callback",
+                                "implHandler": [
+                                    "owner.print();"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "callback",
+                            "designerId": "7d7d9c49-519d-4f33-91f6-efbcd6188835"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "<tpl for=\".\">",
+                            "    <h{depth}>{title}</h{depth}>",
+                            "    {content}",
+                            "</tpl>"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "tpl",
+                    "designerId": "505ab917-23d2-407a-9f4f-ae71ca6dacc4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 0,
+                "container|align": null,
+                "header": false,
+                "height": 60,
+                "layout": "hbox",
+                "layout|region": "north",
+                "margin": 0,
+                "title": "My Panel"
+            },
+            "configAlternates": {
+                "header": "boolean",
+                "height": "auto",
+                "layout|region": "string",
+                "title": "string",
+                "bodyPadding": "auto",
+                "container|align": "string",
+                "layout": "string",
+                "margin": "auto"
+            },
+            "name": "MyPanel",
+            "designerId": "f6cabad0-8ca5-440d-b06d-c3cc3effc5e7",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "flex": 1,
+                        "height": null,
+                        "margin": 0,
+                        "src": "resources/images/gabar-logo.gif",
+                        "width": 233
+                    },
+                    "configAlternates": {
+                        "flex": "number",
+                        "height": "auto",
+                        "margin": "auto",
+                        "src": "uri",
+                        "width": "auto"
+                    },
+                    "name": "MyImg",
+                    "designerId": "84b2b4d7-6f0b-4f45-9172-c2fa728eae48"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": [
+                            "<div style=\"font-weight: bold; padding-top: 5px; text-align: center\">Bar Rules Handbook</div>"
+                        ],
+                        "layout|flex": 1,
+                        "margin": "20 0 0 0"
+                    },
+                    "configAlternates": {
+                        "html": "object",
+                        "layout|flex": "number",
+                        "margin": "auto"
+                    },
+                    "name": "MyComponent",
+                    "designerId": "c3e3b5d8-d3ed-4d5b-90fb-c63022556e5e"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "Search",
+                        "fieldLabel": "",
+                        "labelAlign": "top",
+                        "layout|flex": 1,
+                        "margin": "15 5 0 0",
+                        "style": [
+                            "{",
+                            "  'border-radius' : '5px'",
+                            "}"
+                        ],
+                        "value": [
+                            "{searchText}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "value": "binding",
+                        "emptyText": "string",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "style": "object"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "c47bddec-aff3-46d4-94ec-e182d594aa92",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "buffer": 250,
+                                "fn": "onSearchFieldChange",
+                                "implHandler": [
+                                    "",
+                                    "var store = this.getStore('TableOfContents');",
+                                    "store.clearFilter();",
+                                    "if (!Ext.isEmpty(newValue)) {",
+                                    "    var regExp = new RegExp(newValue,'gi');",
+                                    "    store.filterBy(function(rec) {",
+                                    "       var content =  rec.get('text') + ' ' + rec.get('content');",
+                                    "       if (regExp.exec(content)) {",
+                                    "           return true;",
+                                    "       } else {",
+                                    "           return false;",
+                                    "       }",
+                                    "    });",
+                                    "}",
+                                    "",
+                                    "var data =  this.lookup('contentPnl').getData(data);",
+                                    "this.lookup('contentPnl').setData(data);",
+                                    "this.highlightTerms();"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "buffer": "number",
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onSearchFieldChange",
+                            "designerId": "e07b5de5-5044-4cf6-a4c0-31b7997ba3ab"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            ""
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "tpl",
+                    "designerId": "9a475f7f-bced-4c56-bb31-9567afa1f56a"
+                }
+            ]
+        }
+    ]
+}
