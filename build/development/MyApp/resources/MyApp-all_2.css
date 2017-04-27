@@ -228,7 +228,7 @@
 .x-tab-focus.x-tab-default {
     border-color: transparent;
     background-color: transparent;
-    outline: 1px solid #5fa2dd;
+    outline: 1px solid #23548d;
     outline-offset: -3px;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:64 */
@@ -247,7 +247,7 @@
     right: 2px;
     bottom: 2px;
     left: 2px;
-    border: 1px solid #5fa2dd;
+    border: 1px solid #23548d;
     pointer-events: none;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2320 */
@@ -319,7 +319,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2643 */
 .x-tab.x-tab-active.x-tab-default .x-tab-inner-default {
-    color: #4c82b1;
+    color: #1c4371;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2648 */
 .x-tab-bar-plain .x-tab.x-tab-active.x-tab-default .x-tab-inner-default {
@@ -327,11 +327,11 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2663 */
 .x-tab.x-tab-active.x-tab-default .x-tab-icon-el {
-    color: #4c82b1;
+    color: #1c4371;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2671 */
 .x-ie8 .x-tab.x-tab-active.x-tab-default .x-tab-icon-el {
-    color: #82a7c8;
+    color: #607c9b;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2677 */
 .x-tab-bar-plain .x-tab.x-tab-active.x-tab-default .x-tab-icon-el {
@@ -1075,7 +1075,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Bar.scss:168 */
 .x-tab-bar-default {
-    background-color: #5fa2dd;
+    background-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Bar.scss:207 */
 .x-tab-bar-default-top > .x-tab-bar-body-default {
@@ -1290,7 +1290,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Bar.scss:580 */
 .x-box-scroller-tab-bar-default {
-    background-color: #5fa2dd;
+    background-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tab/Bar.scss:586 */
 .x-box-scroller-tab-bar-default .x-ie8 .x-box-scroller-plain {
@@ -1454,7 +1454,7 @@
 .x-tree-arrows .x-tree-expander {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #5fa2dd;
+    color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-tree-arrows .x-tree-expander:before {
@@ -1473,7 +1473,7 @@
 .x-tree-arrows .x-grid-tree-node-expanded .x-tree-expander {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #5fa2dd;
+    color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-tree-arrows .x-grid-tree-node-expanded .x-tree-expander:before {
@@ -1484,7 +1484,7 @@
 .x-tree-elbow-end-plus {
     font-size: 14px;
     font-family: FontAwesome;
-    color: #5fa2dd;
+    color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-tree-elbow-plus:before,
@@ -1496,7 +1496,7 @@
 .x-grid-tree-node-expanded .x-tree-elbow-end-plus {
     font-size: 14px;
     font-family: FontAwesome;
-    color: #5fa2dd;
+    color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-grid-tree-node-expanded .x-tree-elbow-plus:before,
@@ -1508,7 +1508,7 @@
     width: 16px;
     height: 32px;
     line-height: 32px;
-    color: #5fa2dd;
+    color: #23548d;
     font-size: 16px;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/tree/View.scss:165 */
@@ -1534,7 +1534,7 @@
 .x-tree-icon-leaf {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #5fa2dd;
+    color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-tree-icon-leaf:before {
@@ -1544,7 +1544,7 @@
 .x-tree-icon-parent {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #5fa2dd;
+    color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-tree-icon-parent:before {
@@ -1554,7 +1554,7 @@
 .x-tree-icon-parent-expanded {
     font-size: 16px;
     font-family: FontAwesome;
-    color: #5fa2dd;
+    color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-tree-icon-parent-expanded:before {
@@ -1579,7 +1579,7 @@
     width: 18px;
     height: 18px;
     font: 18px/1 ExtJS;
-    color: #5fa2dd;
+    color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
 .x-tree-checkbox:before {
@@ -1671,11 +1671,11 @@
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/window/Toast.scss:17 */
 .x-toast-light .x-window-header {
     /* Custom styling */
-    background-color: #7fb5e4;
+    background-color: #4f76a4;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/window/Toast.scss:21 */
 .x-toast-light .x-tool-img {
-    background-color: #7fb5e4;
+    background-color: #4f76a4;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/window/Toast.scss:25 */
 .x-toast-light {
@@ -1942,9 +1942,9 @@
 .x-btn-focus.x-btn-plain-toolbar-small {
     background-image: none;
     background-color: transparent;
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:773 */
 .x-btn-plain-toolbar-small .x-btn-arrow-el {
@@ -1962,7 +1962,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:789 */
 .x-btn-plain-toolbar-small.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #5fa2dd;
+    border: 1px solid #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:796 */
 .x-btn-over.x-btn-plain-toolbar-small {
@@ -1972,9 +1972,9 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:823 */
 .x-btn-focus.x-btn-over.x-btn-plain-toolbar-small {
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:851 */
 .x-btn.x-btn-menu-active.x-btn-plain-toolbar-small,
@@ -1986,9 +1986,9 @@
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:879 */
 .x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-small,
 .x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-small {
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:908 */
 .x-btn.x-btn-disabled.x-btn-plain-toolbar-small {
@@ -2212,18 +2212,18 @@
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1201 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-plain-toolbar-small:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1215 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-plain-toolbar-small:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1230 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-small:after,
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-small:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
 .x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-small:before {
@@ -2525,9 +2525,9 @@
 .x-btn-focus.x-btn-plain-toolbar-medium {
     background-image: none;
     background-color: transparent;
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:773 */
 .x-btn-plain-toolbar-medium .x-btn-arrow-el {
@@ -2545,7 +2545,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:789 */
 .x-btn-plain-toolbar-medium.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #5fa2dd;
+    border: 1px solid #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:796 */
 .x-btn-over.x-btn-plain-toolbar-medium {
@@ -2555,9 +2555,9 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:823 */
 .x-btn-focus.x-btn-over.x-btn-plain-toolbar-medium {
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:851 */
 .x-btn.x-btn-menu-active.x-btn-plain-toolbar-medium,
@@ -2569,9 +2569,9 @@
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:879 */
 .x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-medium,
 .x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-medium {
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:908 */
 .x-btn.x-btn-disabled.x-btn-plain-toolbar-medium {
@@ -2795,18 +2795,18 @@
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1201 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-plain-toolbar-medium:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1215 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-plain-toolbar-medium:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1230 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-medium:after,
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-medium:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
 .x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-medium:before {
@@ -3108,9 +3108,9 @@
 .x-btn-focus.x-btn-plain-toolbar-large {
     background-image: none;
     background-color: transparent;
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:773 */
 .x-btn-plain-toolbar-large .x-btn-arrow-el {
@@ -3128,7 +3128,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:789 */
 .x-btn-plain-toolbar-large.x-arrow-focus .x-btn-arrow-el {
-    border: 1px solid #5fa2dd;
+    border: 1px solid #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:796 */
 .x-btn-over.x-btn-plain-toolbar-large {
@@ -3138,9 +3138,9 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:823 */
 .x-btn-focus.x-btn-over.x-btn-plain-toolbar-large {
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:851 */
 .x-btn.x-btn-menu-active.x-btn-plain-toolbar-large,
@@ -3152,9 +3152,9 @@
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:879 */
 .x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-large,
 .x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-large {
-    -webkit-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    -moz-box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
-    box-shadow: #5fa2dd 0 1px 0px 0 inset, #5fa2dd 0 -1px 0px 0 inset, #5fa2dd -1px 0 0px 0 inset, #5fa2dd 1px 0 0px 0 inset;
+    -webkit-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    -moz-box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
+    box-shadow: #23548d 0 1px 0px 0 inset, #23548d 0 -1px 0px 0 inset, #23548d -1px 0 0px 0 inset, #23548d 1px 0 0px 0 inset;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:908 */
 .x-btn.x-btn-disabled.x-btn-plain-toolbar-large {
@@ -3378,18 +3378,18 @@
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1201 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-plain-toolbar-large:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1215 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-over.x-btn-plain-toolbar-large:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/button/Button.scss:1230 */
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-menu-active.x-btn-plain-toolbar-large:after,
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-large:after {
     border-width: 1px;
-    border-color: #5fa2dd;
+    border-color: #23548d;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
 .x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-large:before {
@@ -3680,7 +3680,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:835 */
 .x-panel-header-light .x-tool-focus {
-    outline: 1px solid #5fa2dd;
+    outline: 1px solid #23548d;
     outline-offset: 1px;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:64 */
@@ -3699,7 +3699,7 @@
     right: -2px;
     bottom: -2px;
     left: -2px;
-    border: 1px solid #5fa2dd;
+    border: 1px solid #23548d;
     pointer-events: none;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:847 */
@@ -5144,7 +5144,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:835 */
 .x-panel-header-light-framed .x-tool-focus {
-    outline: 1px solid #5fa2dd;
+    outline: 1px solid #23548d;
     outline-offset: 1px;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:64 */
@@ -5163,7 +5163,7 @@
     right: -2px;
     bottom: -2px;
     left: -2px;
-    border: 1px solid #5fa2dd;
+    border: 1px solid #23548d;
     pointer-events: none;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:847 */
@@ -5303,7 +5303,7 @@
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neptune/sass/src/grid/column/Column.scss:6 */
 .x-column-header-trigger {
-    background-color: #eaeff4;
+    background-color: #e5e9ed;
     border-left: 1px solid #d0d0d0;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neptune/sass/src/grid/column/Column.scss:12 */
@@ -8273,13 +8273,55 @@
     -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 2px;
     box-shadow: rgba(0, 0, 0, 0.5) 0 2px 2px;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70/sass/src/Component.scss:1 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:1 */
+.sbgbackground {
+    background-image: url(images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:7 */
 .x-livesearch-match {
-    font-weight: bold;
     background-color: yellow;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70/sass/src/_architect_src.scss:1 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:15 */
+.topborder {
+    border-top: 1px solid #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:19 */
+.warning {
+    background-color: silver;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:23 */
+.deleted {
+    text-decoration: line-through;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:27 */
+.added {
+    background-color: yellow;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:1 */
+.sbgbackground {
+    background-image: url(images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:7 */
 .x-livesearch-match {
-    font-weight: bold;
+    background-color: yellow;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:15 */
+.topborder {
+    border-top: 1px solid #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:19 */
+.warning {
+    background-color: silver;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:23 */
+.deleted {
+    text-decoration: line-through;
+}
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:27 */
+.added {
     background-color: yellow;
 }

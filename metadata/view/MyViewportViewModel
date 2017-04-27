@@ -8,7 +8,8 @@
     "userConfig": {
         "data": [
             "{",
-            " searchText: ''",
+            " searchText: '',",
+            " selectedNode: null",
             "}"
         ],
         "designer|userAlias": "myviewport",
@@ -48,7 +49,13 @@
                     "                    text: 'Rule 1-101. Creation',",
                     "                    leaf: true, ",
                     "                    checked: false,",
-                    "                    content: 'Pursuant to the authority of this court and the Act of the General Assembly approved by the Governor on March 11, 1963 (Georgia Laws 1963, page 70) the State Bar of Georgia is hereby created and established.'",
+                    "                    content: 'Pursuant to the authority of this court and the Act of the General Assembly approved by the Governor on March 11, 1963 (Georgia Laws 1963, page 70) the State Bar of Georgia is hereby created and established.',",
+                    "                    versions: [",
+                    "                        {",
+                    "                            title: 'Modified 2016-01-01',",
+                    "                            content: 'Pursuant to the authority of <span class=\"deleted\">these courts</span> <span class=\"added\">this court</span> and the Act of the General Assembly approved by the Governor on March 11, 1963 (Georgia Laws 1963, page 70) the State Bar of Georgia is hereby created and established.',",
+                    "                        }",
+                    "                    ]",
                     "                   },",
                     "                   { text: 'Rule 1-102. Powers',",
                     "                     leaf: true, ",
@@ -90,6 +97,107 @@
             },
             "name": "MyTreeStore",
             "designerId": "dc085e83-4e78-4df8-98fa-368cfa34094f"
+        },
+        {
+            "type": "Ext.app.bind.Formula",
+            "reference": {
+                "name": "formulas",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "versionsAvailable"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyFormula",
+            "designerId": "f46eb837-4611-476e-aa23-5fdd984ed3e1",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "get"
+                        ],
+                        "fn": "get",
+                        "implHandler": [
+                            "var selectedNode = get('selectedNode');",
+                            "if (!selectedNode) {",
+                            "    return false;",
+                            "}",
+                            "versions = selectedNode.get('versions');;",
+                            "if (versions &&  versions.length > 0) {",
+                            "    return true;",
+                            "} else {",
+                            "    return false;",
+                            "}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "get",
+                    "designerId": "801283ac-2f80-45e0-9a77-f8589438448a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ContentVersions"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyStore",
+            "designerId": "8315c23b-fe35-427b-970b-401376fe2282",
+            "cn": [
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "id"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField",
+                    "designerId": "bff0ab04-37bb-4065-9b69-3cffa819e415"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "text"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField1",
+                    "designerId": "127177ce-af7a-448a-889d-f264376c5653"
+                }
+            ]
         }
     ]
 }

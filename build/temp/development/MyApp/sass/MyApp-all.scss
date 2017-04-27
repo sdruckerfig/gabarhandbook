@@ -1,6 +1,6 @@
 $app-name:  dynamic( 'MyApp' );
 $image-search-path: '/Library/WebServer/Documents/gabarhandbook/build/development/MyApp/resources';
-$theme-name:  dynamic( 'theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70' );
+$theme-name:  dynamic( 'theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractcontainer: dynamic(true);;
 $include-ext-abstractmanager: dynamic(true);;
@@ -973,13 +973,13 @@ $current-resource-root: $theme-triton-resource-root;
 $relative-image-path-for-uis: $theme-triton-resource-path;
 @import '../../../../../ext/classic/theme-triton/sass/etc/all';
 
-/* including package theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70 */
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root: '' !default;
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path: 'images' !default;
-$current-package: 'theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70';
-$current-resource-root: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root;
-$relative-image-path-for-uis: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path;
-@import '../../../../../packages/local/theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70/sass/etc/all';
+/* including package theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4 */
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root: '' !default;
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path: 'images' !default;
+$current-package: 'theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4';
+$current-resource-root: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root;
+$relative-image-path-for-uis: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path;
+@import '../../../../../packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/etc/all';
 
 
 /* ======================== VAR ======================== */
@@ -1157,21 +1157,21 @@ $relative-image-path-for-uis: $theme-triton-resource-path;
 @import '../../../../../ext/classic/theme-triton/sass/var/tab/Bar';
 @import '../../../../../ext/classic/theme-triton/sass/var/tree/View';
 
-/* including package theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70 */
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root: '' !default;
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path: 'images' !default;
-$current-package: 'theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70';
-$current-resource-root: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root;
-$relative-image-path-for-uis: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path;
-@import '../../../../../packages/local/theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70/sass/var/Component';
+/* including package theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4 */
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root: '' !default;
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path: 'images' !default;
+$current-package: 'theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4';
+$current-resource-root: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root;
+$relative-image-path-for-uis: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path;
+@import '../../../../../packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/var/Component';
 
-/* including package theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70 */
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root: '' !default;
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path: 'images' !default;
-$current-package: 'theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70';
-$current-resource-root: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root;
-$relative-image-path-for-uis: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path;
-@import '../../../../../packages/local/theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70/sass/var/_architect_vars';
+/* including package theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4 */
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root: '' !default;
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path: 'images' !default;
+$current-package: 'theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4';
+$current-resource-root: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root;
+$relative-image-path-for-uis: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path;
+@import '../../../../../packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/var/_architect_vars';
 
 
 /* ======================== RULE ======================== */
@@ -1380,18 +1380,18 @@ $relative-image-path-for-uis: $theme-triton-resource-path;
 @import '../../../../../ext/classic/theme-triton/sass/src/tab/Tab';
 @import '../../../../../ext/classic/theme-triton/sass/src/window/Toast';
 
-/* including package theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70 */
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root: '' !default;
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path: 'images' !default;
-$current-package: 'theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70';
-$current-resource-root: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root;
-$relative-image-path-for-uis: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path;
-@import '../../../../../packages/local/theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70/sass/src/Component';
+/* including package theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4 */
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root: '' !default;
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path: 'images' !default;
+$current-package: 'theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4';
+$current-resource-root: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root;
+$relative-image-path-for-uis: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path;
+@import '../../../../../packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component';
 
-/* including package theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70 */
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root: '' !default;
-$theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path: 'images' !default;
-$current-package: 'theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70';
-$current-resource-root: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-root;
-$relative-image-path-for-uis: $theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70-resource-path;
-@import '../../../../../packages/local/theme-triton-af5297fa-577d-4d51-9d81-4b43695ecb70/sass/src/_architect_src';
+/* including package theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4 */
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root: '' !default;
+$theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path: 'images' !default;
+$current-package: 'theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4';
+$current-resource-root: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root;
+$relative-image-path-for-uis: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path;
+@import '../../../../../packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src';
