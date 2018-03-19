@@ -23,42 +23,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|params": [
-                    "node"
-                ],
-                "fn": "getAllChildNodes",
-                "implHandler": [
-                    "var me = this;",
-                    "var allNodes = new Array();",
-                    "if (node == null) {",
-                    "    return [];",
-                    "}",
-                    "",
-                    "if(!node.hasChildNodes()){",
-                    "    return node;",
-                    "}else{",
-                    "    allNodes.push(node);",
-                    "    node.eachChild(function(Mynode){allNodes = allNodes.concat(me.getAllChildNodes(Mynode));});",
-                    "}",
-                    "return allNodes;"
-                ]
-            },
-            "configAlternates": {
-                "designer|params": "typedarray",
-                "fn": "string",
-                "implHandler": "code"
-            },
-            "name": "getAllChildNodes",
-            "designerId": "2673d667-cc89-4fd8-a1cb-46ea1d479428"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "fn": "highlightTerms",
                 "implHandler": [
                     "var searchValue= this.getViewModel().get('searchText');",
@@ -109,6 +73,375 @@
             },
             "name": "highlightTerms",
             "designerId": "fe079da8-e29b-47a2-98b0-f93ee877b62c"
+        },
+        {
+            "type": "Ext.app.route.Route",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "id"
+                ],
+                "fn": "onGoToNode",
+                "implHandler": [
+                    "var vm = this.getViewModel();",
+                    "var tree = this.lookup('navigation');",
+                    "var checkedNodes = tree.getChecked();",
+                    "var ts = vm.get('TableOfContents');",
+                    "",
+                    "if (ts.getCount() < 3) {",
+                    "    Ext.defer(this.onGoToNode,250,this,[id]);",
+                    "    return;",
+                    "}",
+                    "var record = ts.findNode('id',id);",
+                    "vm.set('selectedNode',record);",
+                    "",
+                    "if (checkedNodes.length == 0) {",
+                    "    var nodes = this.getAllChildNodes(record);",
+                    "    if (Ext.isArray(nodes)) {",
+                    "",
+                    "        var data = [];",
+                    "        for (var i=0; i<nodes.length; i++) {",
+                    "          data.push({",
+                    "              title: nodes[i].get('text'),",
+                    "              content: nodes[i].get('content'),",
+                    "              depth: nodes[i].get('depth')",
+                    "          });",
+                    "        }",
+                    "        this.lookup('contentPnl').setData(data);",
+                    "",
+                    "    } else {",
+                    "        this.lookup('contentPnl').setData([{",
+                    "            title: record.get('text'),",
+                    "            content: record.get('content'),",
+                    "            depth: record.get('depth')",
+                    "        }]);",
+                    "    }",
+                    "    this.highlightTerms();",
+                    "}",
+                    "",
+                    "if (record.get('versions') && record.get('versions').length > 0) {",
+                    "    var s = this.getViewModel().get('ContentVersions');",
+                    "    s.removeAll(true);",
+                    "    s.add({",
+                    "        id: 0,",
+                    "        text: 'Current Version'",
+                    "    });",
+                    "    var versions = record.get('versions');",
+                    "    for (var i=0; i<versions.length; i++) {",
+                    "        s.add({",
+                    "            id: i+1,",
+                    "            text: versions[i].title",
+                    "        });",
+                    "    }",
+                    "}",
+                    "",
+                    "vm.set('nextNode',this.getNextNode(record));",
+                    "vm.set('prevNode',this.getPrevNode(record));"
+                ],
+                "url": "handbook/:id"
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code",
+                "url": "string"
+            },
+            "name": "onGoToNode",
+            "designerId": "e17f828d-7596-464a-bd31-2f1988575a01"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "node"
+                ],
+                "fn": "getAllChildNodes",
+                "implHandler": [
+                    "var me = this;",
+                    "var allNodes = new Array();",
+                    "if (node == null) {",
+                    "    return [];",
+                    "}",
+                    "",
+                    "if(!node.hasChildNodes()){",
+                    "    return node;",
+                    "}else{",
+                    "    allNodes.push(node);",
+                    "    node.eachChild(function(Mynode){allNodes = allNodes.concat(me.getAllChildNodes(Mynode));});",
+                    "}",
+                    "return allNodes;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getAllChildNodes",
+            "designerId": "77a513d2-59ea-41de-8ad4-164c3a3dfb71"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationbuttonbar",
+                "designer|params": [
+                    "buttonbar",
+                    "button"
+                ],
+                "fn": "onGoToPrevious",
+                "implHandler": [
+                    "var nextNode = this.getViewModel().get('prevNode');",
+                    "if (nextNode) {",
+                    "   this.redirectTo('handbook/' + nextNode.id);",
+                    "}"
+                ],
+                "name": "gotoprevious",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onGoToPrevious",
+            "designerId": "aa9a095d-91a8-4e7c-9e9b-6fcef47b082d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationbuttonbar",
+                "designer|params": [
+                    "buttonbar",
+                    "button"
+                ],
+                "fn": "onGoToNext",
+                "implHandler": [
+                    "var nextNode = this.getViewModel().get('nextNode');",
+                    "if (nextNode) {",
+                    "    this.redirectTo('handbook/' + nextNode.id);",
+                    "}"
+                ],
+                "name": "gotonext",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onGoToNext",
+            "designerId": "1782bd15-21f9-4a81-bef3-97547ecb3e35"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "node"
+                ],
+                "fn": "getNextNode",
+                "implHandler": [
+                    "var nextNode = null;",
+                    "if (node.childNodes.length > 0) {",
+                    "    nextNode = node.childNodes[0];",
+                    "} else if (node.nextSibling) {",
+                    "    nextNode = node.nextSibling;",
+                    "} else {",
+                    "    nextNode = node.parentNode.nextSibling;",
+                    "}",
+                    "",
+                    "return nextNode;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getNextNode",
+            "designerId": "355836af-9a9c-40fb-8cac-26afd8d7b2e5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "node"
+                ],
+                "fn": "getPrevNode",
+                "implHandler": [
+                    "",
+                    "",
+                    "",
+                    "var nextNode = null;",
+                    "if (node.previousSibling) {",
+                    "    if (node.previousSibling.childNodes.length > 0) {",
+                    "        nextNode = node.previousSibling.lastChild;",
+                    "    } else {",
+                    "        nextNode = node.previousSibling;",
+                    "    }",
+                    "} else if (node.parentNode){",
+                    "    nextNode = node.parentNode;",
+                    "}",
+                    "",
+                    "if (nextNode.id == 'root') {",
+                    "  return null;",
+                    "} else {",
+                    "  return nextNode;  ",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getPrevNode",
+            "designerId": "411b5092-af25-4aae-9530-f763dd2d4582"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigation",
+                "designer|params": [
+                    "target",
+                    "nodes"
+                ],
+                "fn": "onChapterSelect",
+                "implHandler": [
+                    "var data = [];",
+                    "",
+                    "for (var i=0; i<nodes.length; i++) {",
+                    "",
+                    "    var children = this.getAllChildNodes(nodes[i]);",
+                    "",
+                    "    if (!Ext.isArray(children)) {",
+                    "        children = [children];",
+                    "    }",
+                    "",
+                    "    for (var j=0; j<children.length; j++) {",
+                    "        var found = false;",
+                    "        for (var k=0; k<data.length; k++) {",
+                    "            if (data[k].id == children[j].id) {",
+                    "                found = true;",
+                    "                break;",
+                    "            }",
+                    "        }",
+                    "        if (!found) {",
+                    "            data.push({",
+                    "                title: children[j].get('text'),",
+                    "                content: children[j].get('content'),",
+                    "                depth: children[j].get('depth'),",
+                    "                id: children[j].id",
+                    "            });",
+                    "        }",
+                    "    }",
+                    "",
+                    "}",
+                    "this.lookup('contentPnl').setData(data);",
+                    "this.highlightTerms();"
+                ],
+                "name": "onmultiselectchange",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onChapterSelect",
+            "designerId": "740614c8-6f59-427f-9198-d370bddc1b08"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationheader",
+                "designer|params": [
+                    "target",
+                    "searchterm",
+                    "searchfield"
+                ],
+                "fn": "onTextSearchChange",
+                "implHandler": [
+                    "var store = this.getViewModel().get('TableOfContents');",
+                    "store.clearFilter();",
+                    "if (!Ext.isEmpty(searchterm)) {",
+                    "    var regExp = new RegExp(searchterm,'gi');",
+                    "    store.filterBy(function(rec) {",
+                    "       var content =  rec.get('text') + ' ' + rec.get('content');",
+                    "       if (regExp.exec(content)) {",
+                    "           return true;",
+                    "       } else {",
+                    "           return false;",
+                    "       }",
+                    "    });",
+                    "}",
+                    "",
+                    "var contentPnl = this.lookup('contentPnl');",
+                    "var data = contentPnl.getData(data);",
+                    "contentPnl.setData(data);",
+                    "this.highlightTerms();"
+                ],
+                "name": "textsearchchange",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onTextSearchChange",
+            "designerId": "3247e59e-e2a9-4452-9875-f4f78b05de24"
         }
     ]
 }

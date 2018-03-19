@@ -1,0 +1,152 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": false,
+        "bodyPadding": 10,
+        "cls": [
+            "topborder"
+        ],
+        "container|align": "middle",
+        "container|pack": "center",
+        "designer|uiInterfaceName": "default",
+        "designer|userAlias": "navigationbuttonbar",
+        "designer|userClassName": "handbook.navigation.Buttonbar",
+        "header": false,
+        "height": 50,
+        "layout": "hbox",
+        "title": "My Panel"
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "container|pack": "string",
+        "header": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "layout|region": "string",
+        "title": "string",
+        "bodyBorder": "boolean",
+        "cls": "typedarray",
+        "designer|uiInterfaceName": "string",
+        "bodyPadding": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyPanel2",
+    "designerId": "1f21545c-e9d7-43fe-9ac2-9d0743e193ca",
+    "viewControllerInstanceId": "334e7f47-58f9-44fd-9def-51de2bd9b215",
+    "viewModelInstanceId": "9376ce53-62cd-4b2d-89ff-57a1423f9e24",
+    "cn": [
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disabled": [
+                    "{!prevNode}"
+                ],
+                "layout|flex": 1,
+                "margin": "0 5 0 0",
+                "text": "<< Previous"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "margin": "auto",
+                "text": "string",
+                "width": "auto",
+                "disabled": "binding"
+            },
+            "name": "MyButton",
+            "designerId": "556f8748-f630-418f-bf4a-e8a7b82a216c",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "button",
+                            "e"
+                        ],
+                        "designer|viewControllerFn": "onPrevTopic",
+                        "fn": "handler",
+                        "implHandler": [
+                            "",
+                            "this.getView().fireEvent('gotoprevious',this.getView(),button);"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "designer|viewControllerFn": "string",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "handler",
+                    "designerId": "62d83423-9bfc-41dd-96ad-12e83e5cca91"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disabled": [
+                    "{!nextNode}"
+                ],
+                "layout|flex": 1,
+                "text": "Next >>"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "text": "string",
+                "width": "auto",
+                "disabled": "binding"
+            },
+            "name": "MyButton2",
+            "designerId": "d51dba9d-2063-4d6f-afe0-92bfcd436a3a",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "button",
+                            "e"
+                        ],
+                        "designer|viewControllerFn": "onNextTopic",
+                        "fn": "handler",
+                        "implHandler": [
+                            "this.getView().fireEvent('gotonext',this.getView(),button);"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "designer|viewControllerFn": "string",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "handler",
+                    "designerId": "9d14cc3a-979e-4a28-8c6d-cd79fe53c737"
+                }
+            ]
+        }
+    ]
+}

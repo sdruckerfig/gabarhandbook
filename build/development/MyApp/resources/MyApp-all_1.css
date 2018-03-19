@@ -210,10 +210,6 @@
     overflow: hidden;
     padding: 0 0 0 0;
 }
-/* /Library/WebServer/Documents/gabarhandbook/ext/packages/core/sass/src/list/TreeItem.scss:567 */
-.x-big .x-treelist {
-    background-position:  0%;
-}
 /* /Library/WebServer/Documents/gabarhandbook/ext/packages/core/sass/src/list/TreeItem.scss:575 */
 .x-treelist-container,
 .x-treelist-root-container {
@@ -375,10 +371,6 @@
 /* /Library/WebServer/Documents/gabarhandbook/ext/packages/core/sass/src/list/TreeItem.scss:298 */
 .x-treelist-item-floated > .x-treelist-container {
     margin-left: -16px;
-}
-/* /Library/WebServer/Documents/gabarhandbook/ext/packages/core/sass/src/list/TreeItem.scss:301 */
-.x-big .x-treelist-item-floated > .x-treelist-container {
-    margin-left: 0;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/packages/core/sass/src/list/TreeItem.scss:307 */
 .x-treelist-item-floated > * > * > .x-treelist-item-text {
@@ -1863,7 +1855,6 @@ the height of a multi-line element */
     display: block;
     /* preserve margins in IE */
     position: relative;
-    /* preserve margins in IE */
     overflow: hidden;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/src/form/FieldSet.scss:7 */
@@ -2119,7 +2110,6 @@ the height of a multi-line element */
     height: auto!important;
     /* The wrap has to accommodate the list, so override the .x-form-text height rule */
     cursor: text;
-    /* The wrap has to accommodate the list, so override the .x-form-text height rule */
     overflow-y: auto;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/src/form/field/Tag.scss:11 */
@@ -11907,7 +11897,6 @@ body > .x-mask {
     position: relative;
     /*allow hover in IE on empty items*/
     border-width: 1px;
-    /*allow hover in IE on empty items*/
     border-style: dotted;
     border-color: #fff;
     color: #404040;
@@ -16176,5 +16165,9 @@ div.x-border-layout-ct {
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/frame.scss:400 */
 .x-tab-default-right-tc {
+    height: 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/frame.scss:403 */
+.x-tab-default-right-bc {
     height: 0;
 }

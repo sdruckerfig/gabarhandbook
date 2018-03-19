@@ -1,0 +1,170 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyCls": [
+            "sbgbackground"
+        ],
+        "bodyPadding": 5,
+        "container|align": "middle",
+        "designer|userAlias": "navigationheader",
+        "designer|userClassName": "handbook.header.Header",
+        "header": false,
+        "height": 89,
+        "layout": "hbox",
+        "margin": 0,
+        "title": "My Panel"
+    },
+    "configAlternates": {
+        "header": "boolean",
+        "height": "auto",
+        "layout|region": "string",
+        "title": "string",
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "layout": "string",
+        "margin": "auto",
+        "bodyCls": "typedarray",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyPanel",
+    "designerId": "5c88611a-fbf5-414f-ab16-5f6e757ae4da",
+    "viewControllerInstanceId": "8bec3a91-569a-4ce4-a306-a1e75f5b4915",
+    "viewModelInstanceId": "384a93b6-fb93-4f36-a55f-282b0eb3da62",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": [
+                    "<div style=\"font-weight: bold; font-size: 22px; color: white;\">Bar Rules Handbook</div>"
+                ],
+                "layout|flex": 2,
+                "margin": null
+            },
+            "configAlternates": {
+                "html": "object",
+                "layout|flex": "number",
+                "margin": "auto"
+            },
+            "name": "MyComponent",
+            "designerId": "c3e3b5d8-d3ed-4d5b-90fb-c63022556e5e"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "searchfield"
+                ],
+                "emptyText": "Search",
+                "fieldLabel": "",
+                "labelAlign": "top",
+                "layout|flex": 1,
+                "margin": "0 5 0 0",
+                "style": [
+                    "{",
+                    "  'border-radius' : '5px'",
+                    "}"
+                ],
+                "value": [
+                    "{searchText}"
+                ]
+            },
+            "configAlternates": {
+                "value": "binding",
+                "emptyText": "string",
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|flex": "number",
+                "margin": "auto",
+                "style": "object",
+                "cls": "typedarray"
+            },
+            "name": "MyTextField",
+            "designerId": "c47bddec-aff3-46d4-94ec-e182d594aa92",
+            "cn": [
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "buffer": 250,
+                        "fn": "onSearchFieldChange",
+                        "implHandler": [
+                            "",
+                            "this.getView().fireEvent('textsearchchange',this.getView(),newValue,field);",
+                            "",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "buffer": "number",
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onSearchFieldChange",
+                    "designerId": "e07b5de5-5044-4cf6-a4c0-31b7997ba3ab"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "implHandler": "code"
+            },
+            "name": "tpl",
+            "designerId": "9a475f7f-bced-4c56-bb31-9567afa1f56a"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "text": "Clear"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "text": "string"
+            },
+            "name": "MyButton1",
+            "designerId": "b201b889-4b82-4170-8482-5fcea7419e4a"
+        }
+    ]
+}

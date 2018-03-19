@@ -63,7 +63,7 @@ Ext.define('MyApp.view.override.Panel', {
         cw.print();
 
         // destroy the iframe
-        // Ext.fly(iFrameId).destroy();
+        Ext.fly(iFrameId).destroy();
 
     }
 });

@@ -1,0 +1,238 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "collapsible": true,
+        "designer|userAlias": "displaycontent",
+        "designer|userClassName": "handbook.content.Content",
+        "flex": 3,
+        "reference": "contentPnl",
+        "scrollable": true,
+        "title": "Content",
+        "width": 150
+    },
+    "configAlternates": {
+        "collapsible": "boolean",
+        "flex": "number",
+        "layout|region": "string",
+        "layout|split": "boolean",
+        "title": "string",
+        "width": "auto",
+        "bodyPadding": "auto",
+        "reference": "string",
+        "scrollable": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyPanel1",
+    "designerId": "3215971f-2bae-443d-a648-2103745d90f5",
+    "viewControllerInstanceId": "5bffd82e-db43-4d29-a5e5-640b21a9b097",
+    "viewModelInstanceId": "6ce09ffe-fdca-4c2b-8a8c-6ba8d4823a5e",
+    "cn": [
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "print"
+            },
+            "configAlternates": {
+                "type": "string"
+            },
+            "name": "MyTool1",
+            "designerId": "23e5dab4-8a9e-44d8-b170-562b3f17e62d",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "owner",
+                            "tool",
+                            "event"
+                        ],
+                        "fn": "callback",
+                        "implHandler": [
+                            "owner.print();"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "callback",
+                    "designerId": "7d7d9c49-519d-4f33-91f6-efbcd6188835"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "<tpl for=\".\">",
+                    "    <h{depth}>{title}</h{depth}>",
+                    "    {content}",
+                    "</tpl>"
+                ]
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "implHandler": "code"
+            },
+            "name": "tpl",
+            "designerId": "505ab917-23d2-407a-9f4f-ae71ca6dacc4"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "warning"
+                ],
+                "dock": "top",
+                "hidden": [
+                    "{!versionsAvailable}"
+                ]
+            },
+            "configAlternates": {
+                "hidden": "binding",
+                "cls": "typedarray",
+                "dock": "string"
+            },
+            "name": "MyToolbar",
+            "designerId": "8e39a139-30b9-45d6-8189-dbc6479cebad",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.TextItem",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Multiple Versions Available",
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "html": "string",
+                        "layout|flex": "number"
+                    },
+                    "name": "MyTextItem",
+                    "designerId": "c7d34b89-873b-4849-8270-5867bdea4e2d"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MyFill",
+                    "designerId": "10ab163a-7bfe-4d63-bca8-ac80c2a8c511"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "Select Version",
+                        "fieldLabel": null,
+                        "forceSelection": true,
+                        "layout|flex": null,
+                        "queryMode": "local",
+                        "store": [
+                            "{ContentVersions}"
+                        ],
+                        "valueField": "id",
+                        "width": 200
+                    },
+                    "configAlternates": {
+                        "store": "binding",
+                        "emptyText": "string",
+                        "fieldLabel": "string",
+                        "forceSelection": "boolean",
+                        "layout|flex": "number",
+                        "queryMode": "string",
+                        "valueField": "datafield",
+                        "width": "auto"
+                    },
+                    "name": "MyComboBox",
+                    "designerId": "79fe4eed-9184-4d52-bfa0-81f6eb7d773c",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "changeVersion",
+                                "implHandler": [
+                                    "var id = record.get('id');",
+                                    "var dataRec =  this.getViewModel().get('selectedNode');",
+                                    "var versions = dataRec.get('versions');",
+                                    "if (id == 0) {",
+                                    "    this.lookup('contentPnl').setData([{",
+                                    "                    title: dataRec.get('text'),",
+                                    "                    content: dataRec.get('content'),",
+                                    "                    depth: dataRec.get('depth')",
+                                    "    }]);",
+                                    "} else {",
+                                    "     this.lookup('contentPnl').setData([{",
+                                    "                    title: dataRec.get('text'),",
+                                    "                    content: versions[id - 1].content,",
+                                    "                    depth: dataRec.get('depth')",
+                                    "    }]);",
+                                    "}"
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "changeVersion",
+                            "designerId": "6d3e355d-b263-44d5-996b-919bdaf7676f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

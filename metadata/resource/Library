@@ -9,7 +9,8 @@
         "basePath": "ext/build/",
         "designer|userClassName": "Library",
         "libraryRequires": [
-            "font-awesome"
+            "font-awesome",
+            "ux"
         ],
         "theme": "MyTritonTheme1"
     },

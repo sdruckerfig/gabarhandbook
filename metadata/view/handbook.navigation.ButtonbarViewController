@@ -1,0 +1,17 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "handbook.navigation.buttonbar",
+        "designer|userClassName": "handbook.navigation.ButtonbarViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "334e7f47-58f9-44fd-9def-51de2bd9b215"
+}

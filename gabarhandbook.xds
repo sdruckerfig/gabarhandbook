@@ -3,11 +3,11 @@
     "settings": {
         "cmd": {
             "license": "commercial",
-            "cmdVersion": "6.2.2.36",
+            "cmdVersion": "6.5.1.240",
             "frameworkVersion": "6.2.1.167"
         },
         "urlPrefixTemplate": "http://localhost:{port}/{path}",
-        "urlPrefix": "http://localhost:52574/",
+        "urlPrefix": "http://localhost:51944/",
         "canvasControls": {
             "viewportSize": {
                 "name": "Auto Expand",
@@ -30,8 +30,8 @@
             "buildPlatform": false
         }
     },
-    "xdsVersion": "4.1.2",
-    "xdsBuild": 188,
+    "xdsVersion": "4.2.2",
+    "xdsBuild": 282,
     "schemaVersion": 1,
     "upgradeVersion": 310000000001,
     "framework": "ext62",
@@ -39,10 +39,24 @@
         "view": [
             "ed99b2fa-74dc-4e63-8a91-ebb4d188332b",
             "4bf1b08b-2088-4336-97d2-e6ff475f208e",
-            "b4cf5a63-a524-4f8c-87a8-2869925a6612"
+            "b4cf5a63-a524-4f8c-87a8-2869925a6612",
+            "6042b846-b4d8-4a09-9df7-4e79a4b22ff6",
+            "14d37e5c-f9cb-4b5f-bdb2-bb4a28bbe0ce",
+            "141e2599-2c50-4470-98e3-d4c5a94ad93d",
+            "5c88611a-fbf5-414f-ab16-5f6e757ae4da",
+            "384a93b6-fb93-4f36-a55f-282b0eb3da62",
+            "8bec3a91-569a-4ce4-a306-a1e75f5b4915",
+            "3215971f-2bae-443d-a648-2103745d90f5",
+            "6ce09ffe-fdca-4c2b-8a8c-6ba8d4823a5e",
+            "5bffd82e-db43-4d29-a5e5-640b21a9b097",
+            "1f21545c-e9d7-43fe-9ac2-9d0743e193ca",
+            "9376ce53-62cd-4b2d-89ff-57a1423f9e24",
+            "334e7f47-58f9-44fd-9def-51de2bd9b215"
         ],
         "store": [],
-        "controller": [],
+        "controller": [
+            "af7c42ec-9b15-4c79-906c-69019cb235a3"
+        ],
         "model": [],
         "resource": [
             "6dfec4b3-7479-467d-8a1c-ff1363337ea3",

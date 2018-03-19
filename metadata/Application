@@ -6,14 +6,24 @@
     },
     "codeClass": null,
     "userConfig": {
+        "controllers": [
+            "Main"
+        ],
+        "defaultToken": "home",
         "name": "MyApp",
         "views": [
-            "MyViewport"
+            "MyViewport",
+            "handbook.navigation.Navigation",
+            "handbook.header.Header",
+            "handbook.content.Content",
+            "handbook.navigation.Buttonbar"
         ]
     },
     "configAlternates": {
         "name": "string",
-        "views": "typedarray"
+        "views": "typedarray",
+        "controllers": "typedarray",
+        "defaultToken": "string"
     },
     "name": "Application",
     "designerId": "application"

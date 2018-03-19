@@ -9,7 +9,9 @@
         "data": [
             "{",
             " searchText: '',",
-            " selectedNode: null",
+            " selectedNode: null,",
+            " nextNode: null,",
+            " prevNode: null",
             "}"
         ],
         "designer|userAlias": "myviewport",

@@ -1,0 +1,17 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "handbook.navigation.navigation",
+        "designer|userClassName": "handbook.navigation.NavigationViewModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "14d37e5c-f9cb-4b5f-bdb2-bb4a28bbe0ce"
+}

@@ -1,0 +1,237 @@
+{
+    "type": "Ext.tree.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "collapsible": false,
+        "designer|userAlias": "navigation",
+        "designer|userClassName": "handbook.navigation.Navigation",
+        "flex": 2,
+        "reference": "mytree",
+        "rootVisible": false,
+        "selection": [
+            "{selectedNode}"
+        ],
+        "store": [
+            "{TableOfContents}"
+        ],
+        "title": "Table of Contents"
+    },
+    "configAlternates": {
+        "collapsible": "boolean",
+        "flex": "number",
+        "layout|region": "string",
+        "layout|split": "boolean",
+        "title": "string",
+        "store": "binding",
+        "reference": "string",
+        "rootVisible": "boolean",
+        "selection": "binding",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyTreePanel",
+    "designerId": "6042b846-b4d8-4a09-9df7-4e79a4b22ff6",
+    "viewControllerInstanceId": "141e2599-2c50-4470-98e3-d4c5a94ad93d",
+    "viewModelInstanceId": "14d37e5c-f9cb-4b5f-bdb2-bb4a28bbe0ce",
+    "cn": [
+        {
+            "type": "Ext.tree.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTreeView",
+            "designerId": "851ed805-3594-4841-bde9-dc331d905bd6"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "tooltip": "Expand All",
+                "type": "expand"
+            },
+            "configAlternates": {
+                "tooltip": "string",
+                "type": "string"
+            },
+            "name": "MyTool",
+            "designerId": "3c82b15b-f9cc-495e-9411-d520a4fa435d",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "owner",
+                            "tool",
+                            "event"
+                        ],
+                        "designer|viewControllerFn": "onExpandAll",
+                        "fn": "callback",
+                        "implHandler": [
+                            "var store = this.getView().getStore();",
+                            "store.getRootNode().expandChildren(true);"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "designer|viewControllerFn": "string",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "callback",
+                    "designerId": "b0fed165-90c3-49a7-9928-5adfee49d1e3"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "tooltip": "Collapse All",
+                "type": "collapse"
+            },
+            "configAlternates": {
+                "tooltip": "string",
+                "type": "string"
+            },
+            "name": "MyTool2",
+            "designerId": "37857698-9799-4be9-a04a-63362cc8ed2a",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "owner",
+                            "tool",
+                            "event"
+                        ],
+                        "designer|viewControllerFn": "onCollapseAll",
+                        "fn": "callback",
+                        "implHandler": [
+                            "var store = this.getView().getStore();",
+                            "store.getRootNode().collapseChildren(true);",
+                            ""
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "designer|viewControllerFn": "string",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "callback",
+                    "designerId": "ddbb3ab0-9c45-4410-9d3e-a1fa2f58c898"
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreepanelCheckChange",
+                "implHandler": [
+                    "var tree = this.getView();",
+                    "var nodes = tree.getChecked();",
+                    "",
+                    "this.getView().fireEvent('onmultiselectchange',this.getView(),nodes);"
+                ],
+                "name": "checkchange",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onTreepanelCheckChange",
+            "designerId": "b43f6c6b-28c3-4827-8a52-3f474ecc34cc"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreepanelSelect",
+                "implHandler": [
+                    "this.redirectTo('handbook/' + record.get('id'));"
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onTreepanelSelect",
+            "designerId": "9a4facf3-9c43-4334-8134-b558d4b5c053"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "tooltip": "Help",
+                "type": "help"
+            },
+            "configAlternates": {
+                "tooltip": "string",
+                "type": "string"
+            },
+            "name": "MyTool3",
+            "designerId": "321242c1-7e0a-4c86-b9e6-9e54287ae041"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom"
+            },
+            "configAlternates": {
+                "dock": "string"
+            },
+            "name": "handbook.navigation.Buttonbar",
+            "designerId": "623be921-ad42-4365-b291-59eae878eec1",
+            "masterInstanceId": "1f21545c-e9d7-43fe-9ac2-9d0743e193ca"
+        }
+    ]
+}
