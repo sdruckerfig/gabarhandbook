@@ -19,12 +19,12 @@ Ext.define('MyApp.view.handbook.content.ContentViewModel', {
 
     requires: [
         'Ext.data.Store',
-        'Ext.data.field.Field',
-        'Ext.app.bind.Formula'
+        'Ext.data.field.Field'
     ],
 
     data: {
-        selectedVersionId: 0
+        selectedVersionId: 0,
+        versionsAvailable: false
     },
 
     stores: {
@@ -37,20 +37,6 @@ Ext.define('MyApp.view.handbook.content.ContentViewModel', {
                     name: 'text'
                 }
             ]
-        }
-    },
-    formulas: {
-        versionsAvailable: function(get) {
-            var selectedNode = get('selectedNode');
-            if (!selectedNode) {
-                return false;
-            }
-            versions = selectedNode.get('versions');;
-            if (versions &&  versions.length > 0) {
-                return true;
-            } else {
-                return false;
-            }
         }
     }
 

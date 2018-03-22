@@ -18,15 +18,21 @@ Ext.define('MyApp.view.handbook.content.ContentViewController', {
     alias: 'controller.mypanel11',
 
     initViewModel: function(vm) {
-        vm.bind('{selectedNode}',this.onChangeSelection,this);
+        vm.bind({
+            bindTo: '{selectedNode}',
+            deep: true
+        }, this.onChangeSelection, this);
+
     },
 
     onChangeSelection: function(record) {
-        this.getViewModel().set('selectedVersion',null);
 
+        var vm = this.getViewModel();
+        vm.set('selectedVersionId',null);
+        vm.set('versionsAvailable',false);
         if (record) {
             if (record.get('versions') && record.get('versions').length > 0) {
-                var s = this.getViewModel().get('ContentVersions');
+                var s = vm.get('ContentVersions');
                 s.removeAll();
                 s.add({
                     id: 0,
@@ -39,8 +45,9 @@ Ext.define('MyApp.view.handbook.content.ContentViewController', {
                         text: "Version " + versions[i].versionNumber
                     });
                 }
+                vm.set('versionsAvailable',true);
+                vm.set('selectedVersionId',0);
             }
-            this.getViewModel().set('selectedVersion',0);
         }
     },
 

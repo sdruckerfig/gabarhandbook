@@ -9,7 +9,8 @@
         "data": [
             "",
             "{",
-            "  selectedVersionId: 0",
+            "  selectedVersionId: 0,",
+            "  versionsAvailable: false",
             "}"
         ],
         "designer|userAlias": "mypanel11",
@@ -69,57 +70,6 @@
                     },
                     "name": "MyField1",
                     "designerId": "127177ce-af7a-448a-889d-f264376c5653"
-                }
-            ]
-        },
-        {
-            "type": "Ext.app.bind.Formula",
-            "reference": {
-                "name": "formulas",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "versionsAvailable"
-            },
-            "configAlternates": {
-                "name": "string"
-            },
-            "name": "MyFormula",
-            "designerId": "9de4fcd3-ff24-4212-aa39-958044af338a",
-            "cn": [
-                {
-                    "type": "fixedfunction",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|params": [
-                            "get"
-                        ],
-                        "fn": "get",
-                        "implHandler": [
-                            "var selectedNode = get('selectedNode');",
-                            "if (!selectedNode) {",
-                            "    return false;",
-                            "}",
-                            "versions = selectedNode.get('versions');;",
-                            "if (versions &&  versions.length > 0) {",
-                            "    return true;",
-                            "} else {",
-                            "    return false;",
-                            "}"
-                        ]
-                    },
-                    "configAlternates": {
-                        "designer|params": "typedarray",
-                        "fn": "string",
-                        "implHandler": "code"
-                    },
-                    "name": "get",
-                    "designerId": "801283ac-2f80-45e0-9a77-f8589438448a"
                 }
             ]
         }
