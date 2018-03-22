@@ -164,6 +164,8 @@ Ext.define('MyApp.view.MyViewportViewController', {
         var record = ts.findNode('id',id);
         vm.set('selectedNode',record);
 
+        tree.getView().focusRow(record);
+
         if (checkedNodes.length == 0) {
             var nodes = this.getAllChildNodes(record);
             if (Ext.isArray(nodes)) {
