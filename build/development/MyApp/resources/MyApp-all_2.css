@@ -8295,6 +8295,371 @@
 .added {
     background-color: yellow;
 }
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:276 */
+.x-panel-readabletext {
+    border-color: #23548d;
+    padding: 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:279 */
+.x-panel-readabletext.x-masked {
+    border-color: #91aac6;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:287 */
+.x-panel-header-readabletext {
+    font-size: 16px;
+    border: 1px solid #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:312 */
+.x-panel-header-readabletext .x-tool-tool-el {
+    background-color: #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:318 */
+.x-panel-header-readabletext-horizontal {
+    padding: 11px 15px 12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:322 */
+.x-panel-header-readabletext-horizontal .x-panel-header-readabletext-tab-bar {
+    margin-top: -11px;
+    margin-bottom: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:330 */
+.x-panel-header-readabletext-horizontal.x-header-noborder {
+    padding: 12px 16px 12px 16px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:334 */
+.x-panel-header-readabletext-horizontal.x-header-noborder .x-panel-header-readabletext-tab-bar {
+    margin-top: -12px;
+    margin-bottom: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:342 */
+.x-panel-header-readabletext-vertical {
+    padding: 15px 11px 15px 12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:346 */
+.x-panel-header-readabletext-vertical .x-panel-header-readabletext-tab-bar {
+    margin-right: -11px;
+    margin-left: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:354 */
+.x-panel-header-readabletext-vertical.x-header-noborder {
+    padding: 16px 12px 16px 12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:358 */
+.x-panel-header-readabletext-vertical.x-header-noborder .x-panel-header-readabletext-tab-bar {
+    margin-right: -12px;
+    margin-left: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:367 */
+.x-rtl.x-panel-header-readabletext-vertical {
+    padding: 15px 12px 15px 11px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:371 */
+.x-rtl.x-panel-header-readabletext-vertical .x-panel-header-readabletext-tab-bar {
+    margin-left: -11px;
+    margin-right: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:379 */
+.x-rtl.x-panel-header-readabletext-vertical.x-header-noborder {
+    padding: 16px 12px 16px 12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:383 */
+.x-rtl.x-panel-header-readabletext-vertical.x-header-noborder .x-panel-header-readabletext-tab-bar {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:392 */
+.x-panel-header-title-readabletext {
+    color: #f0f0f0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    line-height: 20px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:405 */
+.x-panel-header-title-readabletext > .x-title-text-readabletext {
+    text-transform: none;
+    padding: 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:452 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-top {
+    height: 24px;
+    padding-bottom: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:457 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-right {
+    width: 24px;
+    padding-left: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:462 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-right.x-rtl {
+    padding-left: 0;
+    padding-right: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:469 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-bottom {
+    height: 24px;
+    padding-top: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:474 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-left {
+    width: 24px;
+    padding-right: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:479 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-left.x-rtl {
+    padding-right: 0;
+    padding-left: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:486 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext > .x-title-icon-readabletext {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color: #f0f0f0;
+    background-position: center center;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:506 */
+.x-ie8 .x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext > .x-title-icon-readabletext.x-title-glyph {
+    color: #f0f0f0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:517 */
+.x-panel-body-readabletext {
+    background: #fff;
+    border-color: #d0d0d0;
+    color: #404040;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: Verdana, Geneva, sans-serif;
+    border-width: 1px;
+    border-style: solid;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:681 */
+.x-panel-header-readabletext {
+    background-image: none;
+    background-color: #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:685 */
+.x-panel-header-readabletext-vertical {
+    background-image: none;
+    background-color: #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:690 */
+.x-rtl.x-panel-header-readabletext-vertical {
+    background-image: none;
+    background-color: #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:743 */
+.x-panel .x-panel-header-readabletext-collapsed-border-top {
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:747 */
+.x-panel .x-panel-header-readabletext-collapsed-border-right {
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:751 */
+.x-panel .x-panel-header-readabletext-collapsed-border-bottom {
+    border-top-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:755 */
+.x-panel .x-panel-header-readabletext-collapsed-border-left {
+    border-right-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-readabletext-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-readabletext-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-readabletext-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-readabletext-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:791 */
+.x-panel-header-readabletext-horizontal .x-tool-after-title {
+    margin: 0 0 0 6px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:796 */
+.x-panel-header-readabletext-horizontal .x-rtl.x-tool-after-title {
+    margin: 0 6px 0 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:801 */
+.x-panel-header-readabletext-horizontal .x-tool-before-title {
+    margin: 0 6px 0 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:806 */
+.x-panel-header-readabletext-horizontal .x-rtl.x-tool-before-title {
+    margin: 0 0 0 6px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:813 */
+.x-panel-header-readabletext-vertical .x-tool-after-title {
+    margin: 6px 0 0 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:818 */
+.x-panel-header-readabletext-vertical .x-rtl.x-tool-after-title {
+    margin: 6px 0 0 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:823 */
+.x-panel-header-readabletext-vertical .x-tool-before-title {
+    margin: 0 0 6px 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:828 */
+.x-panel-header-readabletext-vertical .x-rtl.x-tool-before-title {
+    margin: 0 0 6px 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:835 */
+.x-panel-header-readabletext .x-tool-focus {
+    outline: 1px solid #fff;
+    outline-offset: 1px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:64 */
+.x-ie .x-panel-header-readabletext .x-tool-focus,
+.x-ie10p .x-panel-header-readabletext .x-tool-focus,
+.x-edge .x-panel-header-readabletext .x-tool-focus {
+    outline: none;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:40 */
+.x-ie .x-panel-header-readabletext .x-tool-focus:after,
+.x-ie10p .x-panel-header-readabletext .x-tool-focus:after,
+.x-edge .x-panel-header-readabletext .x-tool-focus:after {
+    position: absolute;
+    content: ' ';
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border: 1px solid #fff;
+    pointer-events: none;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:847 */
+.x-rtl.x-panel-header-readabletext-collapsed-border-right {
+    border-right-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:850 */
+.x-rtl.x-panel-header-readabletext-collapsed-border-left {
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:864 */
+.x-panel-readabletext-resizable .x-panel-handle {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:2 */
+.x-panel-readabletext-outer-border-l {
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:6 */
+.x-panel-readabletext-outer-border-b {
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:10 */
+.x-panel-readabletext-outer-border-bl {
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:16 */
+.x-panel-readabletext-outer-border-r {
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:20 */
+.x-panel-readabletext-outer-border-rl {
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:26 */
+.x-panel-readabletext-outer-border-rb {
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:32 */
+.x-panel-readabletext-outer-border-rbl {
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:40 */
+.x-panel-readabletext-outer-border-t {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:44 */
+.x-panel-readabletext-outer-border-tl {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:50 */
+.x-panel-readabletext-outer-border-tb {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:56 */
+.x-panel-readabletext-outer-border-tbl {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:64 */
+.x-panel-readabletext-outer-border-tr {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:70 */
+.x-panel-readabletext-outer-border-trl {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:78 */
+.x-panel-readabletext-outer-border-trb {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:86 */
+.x-panel-readabletext-outer-border-trbl {
+    border-color: #23548d !important;
+    border-width: 1px !important;
+}
 /* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:1 */
 .sbgbackground {
     background-image: url(images/banner.jpg);
@@ -8320,6 +8685,371 @@
 /* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:27 */
 .added {
     background-color: yellow;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:276 */
+.x-panel-readabletext {
+    border-color: #23548d;
+    padding: 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:279 */
+.x-panel-readabletext.x-masked {
+    border-color: #91aac6;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:287 */
+.x-panel-header-readabletext {
+    font-size: 16px;
+    border: 1px solid #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:312 */
+.x-panel-header-readabletext .x-tool-tool-el {
+    background-color: #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:318 */
+.x-panel-header-readabletext-horizontal {
+    padding: 11px 15px 12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:322 */
+.x-panel-header-readabletext-horizontal .x-panel-header-readabletext-tab-bar {
+    margin-top: -11px;
+    margin-bottom: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:330 */
+.x-panel-header-readabletext-horizontal.x-header-noborder {
+    padding: 12px 16px 12px 16px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:334 */
+.x-panel-header-readabletext-horizontal.x-header-noborder .x-panel-header-readabletext-tab-bar {
+    margin-top: -12px;
+    margin-bottom: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:342 */
+.x-panel-header-readabletext-vertical {
+    padding: 15px 11px 15px 12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:346 */
+.x-panel-header-readabletext-vertical .x-panel-header-readabletext-tab-bar {
+    margin-right: -11px;
+    margin-left: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:354 */
+.x-panel-header-readabletext-vertical.x-header-noborder {
+    padding: 16px 12px 16px 12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:358 */
+.x-panel-header-readabletext-vertical.x-header-noborder .x-panel-header-readabletext-tab-bar {
+    margin-right: -12px;
+    margin-left: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:367 */
+.x-rtl.x-panel-header-readabletext-vertical {
+    padding: 15px 12px 15px 11px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:371 */
+.x-rtl.x-panel-header-readabletext-vertical .x-panel-header-readabletext-tab-bar {
+    margin-left: -11px;
+    margin-right: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:379 */
+.x-rtl.x-panel-header-readabletext-vertical.x-header-noborder {
+    padding: 16px 12px 16px 12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:383 */
+.x-rtl.x-panel-header-readabletext-vertical.x-header-noborder .x-panel-header-readabletext-tab-bar {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:392 */
+.x-panel-header-title-readabletext {
+    color: #f0f0f0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    line-height: 20px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:405 */
+.x-panel-header-title-readabletext > .x-title-text-readabletext {
+    text-transform: none;
+    padding: 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:452 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-top {
+    height: 24px;
+    padding-bottom: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:457 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-right {
+    width: 24px;
+    padding-left: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:462 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-right.x-rtl {
+    padding-left: 0;
+    padding-right: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:469 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-bottom {
+    height: 24px;
+    padding-top: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:474 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-left {
+    width: 24px;
+    padding-right: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:479 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext.x-title-icon-left.x-rtl {
+    padding-right: 0;
+    padding-left: 8px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:486 */
+.x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext > .x-title-icon-readabletext {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color: #f0f0f0;
+    background-position: center center;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:506 */
+.x-ie8 .x-panel-header-title-readabletext > .x-title-icon-wrap-readabletext > .x-title-icon-readabletext.x-title-glyph {
+    color: #f0f0f0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:517 */
+.x-panel-body-readabletext {
+    background: #fff;
+    border-color: #d0d0d0;
+    color: #404040;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: Verdana, Geneva, sans-serif;
+    border-width: 1px;
+    border-style: solid;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:681 */
+.x-panel-header-readabletext {
+    background-image: none;
+    background-color: #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:685 */
+.x-panel-header-readabletext-vertical {
+    background-image: none;
+    background-color: #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:690 */
+.x-rtl.x-panel-header-readabletext-vertical {
+    background-image: none;
+    background-color: #23548d;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:743 */
+.x-panel .x-panel-header-readabletext-collapsed-border-top {
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:747 */
+.x-panel .x-panel-header-readabletext-collapsed-border-right {
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:751 */
+.x-panel .x-panel-header-readabletext-collapsed-border-bottom {
+    border-top-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:755 */
+.x-panel .x-panel-header-readabletext-collapsed-border-left {
+    border-right-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-readabletext-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, stretch:bottom" !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-readabletext-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top, stretch:top" !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-readabletext-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right, stretch:right" !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-readabletext-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left, stretch:left" !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:791 */
+.x-panel-header-readabletext-horizontal .x-tool-after-title {
+    margin: 0 0 0 6px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:796 */
+.x-panel-header-readabletext-horizontal .x-rtl.x-tool-after-title {
+    margin: 0 6px 0 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:801 */
+.x-panel-header-readabletext-horizontal .x-tool-before-title {
+    margin: 0 6px 0 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:806 */
+.x-panel-header-readabletext-horizontal .x-rtl.x-tool-before-title {
+    margin: 0 0 0 6px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:813 */
+.x-panel-header-readabletext-vertical .x-tool-after-title {
+    margin: 6px 0 0 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:818 */
+.x-panel-header-readabletext-vertical .x-rtl.x-tool-after-title {
+    margin: 6px 0 0 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:823 */
+.x-panel-header-readabletext-vertical .x-tool-before-title {
+    margin: 0 0 6px 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:828 */
+.x-panel-header-readabletext-vertical .x-rtl.x-tool-before-title {
+    margin: 0 0 6px 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:835 */
+.x-panel-header-readabletext .x-tool-focus {
+    outline: 1px solid #fff;
+    outline-offset: 1px;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:64 */
+.x-ie .x-panel-header-readabletext .x-tool-focus,
+.x-ie10p .x-panel-header-readabletext .x-tool-focus,
+.x-edge .x-panel-header-readabletext .x-tool-focus {
+    outline: none;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/css-outline.scss:40 */
+.x-ie .x-panel-header-readabletext .x-tool-focus:after,
+.x-ie10p .x-panel-header-readabletext .x-tool-focus:after,
+.x-edge .x-panel-header-readabletext .x-tool-focus:after {
+    position: absolute;
+    content: ' ';
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border: 1px solid #fff;
+    pointer-events: none;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:847 */
+.x-rtl.x-panel-header-readabletext-collapsed-border-right {
+    border-right-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:850 */
+.x-rtl.x-panel-header-readabletext-collapsed-border-left {
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-neutral/sass/src/panel/Panel.scss:864 */
+.x-panel-readabletext-resizable .x-panel-handle {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:2 */
+.x-panel-readabletext-outer-border-l {
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:6 */
+.x-panel-readabletext-outer-border-b {
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:10 */
+.x-panel-readabletext-outer-border-bl {
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:16 */
+.x-panel-readabletext-outer-border-r {
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:20 */
+.x-panel-readabletext-outer-border-rl {
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:26 */
+.x-panel-readabletext-outer-border-rb {
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:32 */
+.x-panel-readabletext-outer-border-rbl {
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:40 */
+.x-panel-readabletext-outer-border-t {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:44 */
+.x-panel-readabletext-outer-border-tl {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:50 */
+.x-panel-readabletext-outer-border-tb {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:56 */
+.x-panel-readabletext-outer-border-tbl {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:64 */
+.x-panel-readabletext-outer-border-tr {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:70 */
+.x-panel-readabletext-outer-border-trl {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-left-color: #23548d !important;
+    border-left-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:78 */
+.x-panel-readabletext-outer-border-trb {
+    border-top-color: #23548d !important;
+    border-top-width: 1px !important;
+    border-right-color: #23548d !important;
+    border-right-width: 1px !important;
+    border-bottom-color: #23548d !important;
+    border-bottom-width: 1px !important;
+}
+/* /Library/WebServer/Documents/gabarhandbook/ext/classic/theme-base/sass/etc/mixins/border-management.scss:86 */
+.x-panel-readabletext-outer-border-trbl {
+    border-color: #23548d !important;
+    border-width: 1px !important;
 }
 /* /Library/WebServer/Documents/gabarhandbook/ext/packages/ux/sass/src/Gauge.scss:1 */
 .x-gauge-text {

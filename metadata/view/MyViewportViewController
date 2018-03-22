@@ -346,24 +346,27 @@
                 ],
                 "fn": "getPrevNode",
                 "implHandler": [
-                    "",
-                    "",
-                    "",
-                    "var nextNode = null;",
+                    "var vm = this.getViewModel();",
+                    "var s = vm.get('TableOfContents');",
+                    "var prevNode = null;",
                     "if (node.previousSibling) {",
                     "    if (node.previousSibling.childNodes.length > 0) {",
-                    "        nextNode = node.previousSibling.lastChild;",
+                    "        prevNode = this.getLastChildNode(node.previousSibling);",
                     "    } else {",
-                    "        nextNode = node.previousSibling;",
+                    "        prevNode = node.previousSibling;",
                     "    }",
                     "} else if (node.parentNode){",
-                    "    nextNode = node.parentNode;",
+                    "   prevNode = node.parentNode;",
                     "}",
                     "",
-                    "if (nextNode.id == 'root') {",
+                    "if (prevNode.id == 'root') {",
                     "  return null;",
                     "} else {",
-                    "  return nextNode;  ",
+                    "  if (s.isVisible(prevNode)) {",
+                    "      return prevNode;",
+                    "  } else {",
+                    "      return this.getPrevNode(prevNode);",
+                    "  }",
                     "}",
                     ""
                 ]
@@ -489,6 +492,34 @@
             },
             "name": "onTextSearchChange",
             "designerId": "3247e59e-e2a9-4452-9875-f4f78b05de24"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "node"
+                ],
+                "fn": "getLastChildNode",
+                "implHandler": [
+                    "if (!node.lastChild) {",
+                    "    return node;",
+                    "} else {",
+                    "    return this.getLastChildNode(node.lastChild);",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getLastChildNode",
+            "designerId": "b0b0e822-4b97-4be0-8434-b2d475fb363b"
         }
     ]
 }

@@ -264,26 +264,37 @@ Ext.define('MyApp.view.MyViewportViewController', {
     },
 
     getPrevNode: function(node) {
-
-
-
-        var nextNode = null;
+        var vm = this.getViewModel();
+        var s = vm.get('TableOfContents');
+        var prevNode = null;
         if (node.previousSibling) {
             if (node.previousSibling.childNodes.length > 0) {
-                nextNode = node.previousSibling.lastChild;
+                prevNode = this.getLastChildNode(node.previousSibling);
             } else {
-                nextNode = node.previousSibling;
+                prevNode = node.previousSibling;
             }
         } else if (node.parentNode){
-            nextNode = node.parentNode;
+           prevNode = node.parentNode;
         }
 
-        if (nextNode.id == 'root') {
+        if (prevNode.id == 'root') {
           return null;
         } else {
-          return nextNode;
+          if (s.isVisible(prevNode)) {
+              return prevNode;
+          } else {
+              return this.getPrevNode(prevNode);
+          }
         }
 
+    },
+
+    getLastChildNode: function(node) {
+        if (!node.lastChild) {
+            return node;
+        } else {
+            return this.getLastChildNode(node.lastChild);
+        }
     },
 
     onViewportAfterRender: function(component, eOpts) {

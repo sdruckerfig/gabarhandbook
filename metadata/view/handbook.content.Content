@@ -8,12 +8,14 @@
     "userConfig": {
         "bodyPadding": 10,
         "collapsible": true,
+        "designer|uiInterfaceName": "readabletext",
         "designer|userAlias": "displaycontent",
         "designer|userClassName": "handbook.content.Content",
         "flex": 3,
         "reference": "contentPnl",
         "scrollable": true,
         "title": "Content",
+        "ui": "readabletext",
         "width": 150
     },
     "configAlternates": {
@@ -26,8 +28,10 @@
         "bodyPadding": "auto",
         "reference": "string",
         "scrollable": "auto",
+        "designer|uiInterfaceName": "string",
         "designer|userAlias": "string",
-        "designer|userClassName": "string"
+        "designer|userClassName": "string",
+        "ui": "string"
     },
     "name": "MyPanel1",
     "designerId": "3215971f-2bae-443d-a648-2103745d90f5",

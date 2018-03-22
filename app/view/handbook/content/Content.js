@@ -41,6 +41,7 @@ Ext.define('MyApp.view.handbook.content.Content', {
         '    {content}',
         '</tpl>'
     ],
+    ui: 'readabletext',
     width: 150,
     bodyPadding: 10,
     collapsible: true,
