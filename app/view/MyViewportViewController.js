@@ -55,46 +55,51 @@ Ext.define('MyApp.view.MyViewportViewController', {
     onChapterSelect: function(target, nodes) {
         var vm = this.getViewModel();
         var s = vm.get('TableOfContents');
-        if (nodes.length > 0) {
-            vm.set('multiSelectMode', true);
-        } else {
-            vm.set('multiSelectMode', false);
-        }
+
+        vm.set('selectedNodes',nodes);
         var data = [];
 
-        for (var i=0; i<nodes.length; i++) {
+        if (nodes.length > 0) {
+            vm.set('multiSelectMode', true);
+            for (var i=0; i<nodes.length; i++) {
 
-            var children = this.getAllChildNodes(nodes[i]);
+                var children = this.getAllChildNodes(nodes[i]);
 
-            if (!Ext.isArray(children)) {
-                children = [children];
-            }
+                if (!Ext.isArray(children)) {
+                    children = [children];
+                }
 
-            for (var j=0; j<children.length; j++) {
-                var found = false;
-                for (var k=0; k<data.length; k++) {
-                    if (data[k].id == children[j].id) {
-                        found = true;
-                        break;
+
+                for (var j=0; j<children.length; j++) {
+                    var found = false;
+                    for (var k=0; k<data.length; k++) {
+                        if (data[k].id == children[j].id) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found && children[j].get('visible')) {
+                        data.push({
+                            title: children[j].get('text'),
+                            content: children[j].get('content'),
+                            depth: children[j].get('depth'),
+                            id: children[j].id
+                        });
                     }
                 }
-                if (!found && s.isVisible(children[j])) {
-                    data.push({
-                        title: children[j].get('text'),
-                        content: children[j].get('content'),
-                        depth: children[j].get('depth'),
-                        id: children[j].id
-                    });
-                }
-            }
 
+            }
+            this.lookup('contentPnl').setData(data);
+        } else {
+            vm.set('multiSelectMode', false);
+            this.onGoToNode(vm.get('selectedNodeId'));
         }
-        this.lookup('contentPnl').setData(data);
         this.highlightTerms();
     },
 
     onTextSearchChange: function(target, searchterm, searchfield) {
-        var store = this.getViewModel().get('TableOfContents');
+        var vm = this.getViewModel();
+        var store = vm.get('TableOfContents');
         this.getViewModel().set('searchText',searchterm);
         store.clearFilter();
         if (!Ext.isEmpty(searchterm)) {
@@ -109,18 +114,18 @@ Ext.define('MyApp.view.MyViewportViewController', {
             });
         }
 
-
         // find first matching id
         if (store.getCount() > 0) {
           var node = store.getAt(0);
           this.redirectTo('handbook/' + node.get('id'));
         }
 
-        var contentPnl = this.lookup('contentPnl');
-        var data = contentPnl.getData(data);
-        contentPnl.setData(data);
-        this.highlightTerms();
-
+        var sNodes = vm.get('selectedNodes');
+        if (sNodes.length > 0) {
+            this.onChapterSelect(null,sNodes);
+        } else {
+            this.onGoToNode(vm.get('selectedNodeId'));
+        }
     },
 
     highlightTerms: function() {
@@ -167,7 +172,9 @@ Ext.define('MyApp.view.MyViewportViewController', {
     },
 
     onGoToNode: function(id) {
+
         var vm = this.getViewModel();
+        vm.set('selectedNodeId',id);
         var tree = this.lookup('navigation');
         var checkedNodes = tree.getChecked();
         var ts = vm.get('TableOfContents');
@@ -187,11 +194,13 @@ Ext.define('MyApp.view.MyViewportViewController', {
 
                 var data = [];
                 for (var i=0; i<nodes.length; i++) {
-                  data.push({
-                      title: nodes[i].get('text'),
-                      content: nodes[i].get('content'),
-                      depth: nodes[i].get('depth')
-                  });
+                  if (nodes[i].get('visible')) {
+                      data.push({
+                          title: nodes[i].get('text'),
+                          content: nodes[i].get('content'),
+                          depth: nodes[i].get('depth')
+                      });
+                  }
                 }
                 this.lookup('contentPnl').setData(data);
 
@@ -212,17 +221,13 @@ Ext.define('MyApp.view.MyViewportViewController', {
 
     getAllChildNodes: function(node) {
         var me = this;
-        var allNodes = new Array();
-        if (node == null) {
-            return [];
-        }
+        var allNodes = [];
 
-        if(!node.hasChildNodes()){
-            return node;
-        }else{
-            allNodes.push(node);
-            node.eachChild(function(Mynode){allNodes = allNodes.concat(me.getAllChildNodes(Mynode));});
-        }
+        node.cascade({
+            before: function(childNode) {
+                allNodes.push(childNode);
+            }
+        });
         return allNodes;
     },
 

@@ -12,7 +12,9 @@
             " selectedNode: null,",
             " nextNode: null,",
             " prevNode: null,",
-            " multiSelectMode: false",
+            " multiSelectMode: false,",
+            " selectedNodes: [],",
+            " selectedNodeId: ''",
             "}"
         ],
         "designer|userAlias": "myviewport",

@@ -27,7 +27,11 @@ Ext.define('MyApp.view.MyViewportViewModel', {
         selectedNode: null,
         nextNode: null,
         prevNode: null,
-        multiSelectMode: false
+        multiSelectMode: false,
+        selectedNodes: [
+            
+        ],
+        selectedNodeId: ''
     },
 
     stores: {
