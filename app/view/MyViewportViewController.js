@@ -53,6 +53,9 @@ Ext.define('MyApp.view.MyViewportViewController', {
     },
 
     onChapterSelect: function(target, nodes) {
+        var vm = this.getViewModel();
+        var s = vm.get('TableOfContents');
+
         var data = [];
 
         for (var i=0; i<nodes.length; i++) {
@@ -71,7 +74,7 @@ Ext.define('MyApp.view.MyViewportViewController', {
                         break;
                     }
                 }
-                if (!found) {
+                if (!found && s.isVisible(children[j])) {
                     data.push({
                         title: children[j].get('text'),
                         content: children[j].get('content'),
