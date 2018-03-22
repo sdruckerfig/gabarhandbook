@@ -88,6 +88,7 @@ Ext.define('MyApp.view.MyViewportViewController', {
 
     onTextSearchChange: function(target, searchterm, searchfield) {
         var store = this.getViewModel().get('TableOfContents');
+        this.getViewModel().set('searchText',searchterm);
         store.clearFilter();
         if (!Ext.isEmpty(searchterm)) {
             var regExp = new RegExp(searchterm,'gi');
@@ -156,7 +157,7 @@ Ext.define('MyApp.view.MyViewportViewController', {
         var checkedNodes = tree.getChecked();
         var ts = vm.get('TableOfContents');
 
-        if (ts.getCount() < 3) {
+        if (!ts || ts.getCount() < 3) {
             Ext.defer(this.onGoToNode,250,this,[id]);
             return;
         }
@@ -223,15 +224,36 @@ Ext.define('MyApp.view.MyViewportViewController', {
         return allNodes;
     },
 
+    getNextParentSibling: function(node) {
+        if (node.nextSibling) {
+          return node.nextSibling;
+        } else if (node.parentNode) {
+          return this.getNextParentSibling(node.parentNode);
+        } else {
+          return null;
+        }
+
+    },
+
     getNextNode: function(node) {
+        var vm = this.getViewModel();
+        var s = vm.get('TableOfContents');
+
         var nextNode = null;
         if (node.childNodes.length > 0) {
             nextNode = node.childNodes[0];
         } else if (node.nextSibling) {
             nextNode = node.nextSibling;
         } else {
-            nextNode = node.parentNode.nextSibling;
+            nextNode = this.getNextParentSibling(node.parentNode);
         }
+
+        if (nextNode) {
+            if (!s.isVisible(nextNode)) {
+               nextNode = this.getNextNode(nextNode);
+            }
+        }
+
 
         return nextNode;
     },

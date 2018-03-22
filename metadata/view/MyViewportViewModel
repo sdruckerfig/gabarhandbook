@@ -32,73 +32,36 @@
             },
             "codeClass": null,
             "userConfig": {
+                "autoLoad": true,
                 "filterer": "bottomup",
-                "name": "TableOfContents",
-                "root": [
-                    " {",
-                    "        expanded: true,",
-                    "        children: [",
-                    "            { ",
-                    "             text: 'Part 1 - Creation & Organization', ",
-                    "             checked: false,",
-                    "             expanded: true, ",
-                    "             children: [",
-                    "                { text: 'Chapter 1 Creation and Organization', ",
-                    "                 checked: false,",
-                    "                 expanded: true,",
-                    "                 children: [",
-                    "                   { ",
-                    "                    text: 'Rule 1-101. Creation',",
-                    "                    leaf: true, ",
-                    "                    checked: false,",
-                    "                    content: 'Pursuant to the authority of this court and the Act of the General Assembly approved by the Governor on March 11, 1963 (Georgia Laws 1963, page 70) the State Bar of Georgia is hereby created and established.',",
-                    "                    versions: [",
-                    "                        {",
-                    "                            title: 'Modified 2016-01-01',",
-                    "                            content: 'Pursuant to the authority of <span class=\"deleted\">these courts</span> <span class=\"added\">this court</span> and the Act of the General Assembly approved by the Governor on March 11, 1963 (Georgia Laws 1963, page 70) the State Bar of Georgia is hereby created and established.',",
-                    "                        }",
-                    "                    ]",
-                    "                   },",
-                    "                   { text: 'Rule 1-102. Powers',",
-                    "                     leaf: true, ",
-                    "                     checked: false, ",
-                    "                     content: 'The State Bar of Georgia shall be a legal entity; may sue and be sued; shall have perpetual existence; may contract; may purchase, receive, lease, acquire, own, hold, improve, use, and otherwise deal with real and personal property and any legal or equitable interest in property, wherever located; may sell, convey, mortgage, pledge, lease, exchange, and otherwise dispose of all or any part of its property; may adopt and use an official seal; shall establish a principal office; and shall have such other powers, privileges and duties as may be reasonable and necessary for the proper fulfillment of its purposes.'",
-                    "                     },",
-                    "                   { text: 'Rule 1-103. Purposes', leaf: true, checked: false,",
-                    "                   content: '<p>The purposes of the State Bar of Georgia shall be:</p><ol style=\"list-style: lower-alpha outside none;\"><li>to foster among the members of the bar of this State the principles of duty and service to the public;</li><li>to improve the administration of justice; and</li><li>to advance the science of law.</li></ol>'}",
-                    "                 ]",
-                    "                },",
-                    "                 { text: 'Chapter 2: Membership', ",
-                    "                 checked: false,",
-                    "                 expanded: true,",
-                    "                 children: [",
-                    "                   { ",
-                    "                    text: 'Rule 1-201. Membership',",
-                    "                    leaf: true, ",
-                    "                    checked: false,",
-                    "                    content: '<p>All persons now or hereafter who are:</p><ol><li>authorized to practice law in this State or;</li><li>authorized to act as a Foreign Legal Consultant shall be members of the State Bar of Georgia.</li></ol>'",
-                    "                   },",
-                    "                   { text: 'Rule 1-202. Classes of Members',",
-                    "                     leaf: true, ",
-                    "                     checked: false, ",
-                    "                     content: '<p>Membership in the State Bar of Georgia shall consist of five classes: active, foreign law consultant, emeritus, disabled and inactive. The bylaws shall make provision for the registration of each active member and the location of his or her principal office for the practice of law, the registration of each foreign law consultant and the location of his or her principal office, and the registration of emeritus and inactive members and their mailing addresses.</p><ol type=\"a\"><li><strong>Inactive Members</strong>. All lawyers who are neither engaged in the practice of law nor holding themselves out as practicing attorneys nor occupying any public or private position in which they may be called upon to give legal advice or counsel or to examine the law or to pass upon the legal effect of any act, document, or law may be inactive members at their election. Members who are in military service may be inactive if they so elect.</li><li><strong>Active Members</strong>. Active members shall be all other lawyers including judges but excluding foreign law consultants. Only active members of the State Bar of Georgia in good standing may vote or hold office in the State Bar of Georgia.</li><li><strong>Foreign Law Consultants</strong>. Foreign Law Consultants shall be those persons, who are licensed under the Rules Governing Admission to the Practice of Law as adopted by the Supreme Court of Georgia.</li><li><strong>Emeritus Members</strong>. Any member in good standing of the State Bar of Georgia who shall have attained the age of 70 years and who shall have been admitted to the practice of law for at least 25 years, five years of which must be as a member in good standing of the State Bar of Georgia, may retire from the State Bar upon petition to and approval by the Membership Department. Such a retired member shall hold emeritus status. An emeritus member of the State Bar shall not be required to pay dues or annual fees. An emeritus member of the State Bar shall not be privileged to practice law except that an emeritus member may handle pro bono cases referred by either an organized pro bono program recognized by the Pro Bono Project of the State Bar or a non-profit corporation that delivers legal services to the poor. An emeritus member may be reinstated to active or inactive membership upon application to the Membership Department and payment of non-prorated dues for the year in which the emeritus members returns to active or inactive service.</li><li><strong>Disabled Members</strong>. Any member of the State Bar of Georgia may petition the Executive Committee for disabled status provided the member meets one of the following criteria:<ol><li>the member has been determined to be permanently disabled by the Social Security Administration; or</li><li>the member is in the process of applying to the Social Security Administration for permanent disability status; or </li><li>the member has been determined to be permanently disabled or disabled for a period in excess of one year by an insurance company and is receiving payments pursuant to a disability insurance policy; or</li><li>the member has a signed statement from a medical doctor that the member is permanently disabled, or disabled for a period in excess of one year, and unable to practice law.<br /></li></ol><p>Upon the Executive Committee’s granting of the member’s petition for disability status, the disabled member shall be treated as an inactive member of the State Bar of Georgia and shall not be privileged to practice law. A member holding disabled status shall not be required to pay dues or annual fees. A disabled member shall continue in such status until the member requests reinstatement by written application to the membership department of the State Bar of Georgia.</p></li></ol>'",
-                    "                     }",
-                    "                   ]",
-                    "                }",
-                    "            ]",
-                    "            }",
-                    "        ]",
-                    "    }",
-                    "    "
-                ]
+                "name": "TableOfContents"
             },
             "configAlternates": {
                 "filterer": "string",
                 "name": "string",
-                "root": "object"
+                "root": "object",
+                "autoLoad": "boolean"
             },
             "name": "MyTreeStore",
-            "designerId": "dc085e83-4e78-4df8-98fa-368cfa34094f"
+            "designerId": "dc085e83-4e78-4df8-98fa-368cfa34094f",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "http://dev.gabar.org/handbook/components/Handbook.cfc?method=get"
+                    },
+                    "configAlternates": {
+                        "url": "string"
+                    },
+                    "name": "MyAjaxProxy",
+                    "designerId": "84758ee1-0fa5-4c4d-a8c2-e3948f63bafd"
+                }
+            ]
         },
         {
             "type": "Ext.app.bind.Formula",

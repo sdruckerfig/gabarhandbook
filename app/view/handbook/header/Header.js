@@ -49,6 +49,7 @@ Ext.define('MyApp.view.handbook.header.Header', {
         {
             xtype: 'textfield',
             flex: 1,
+            reference: 'searchfield',
             cls: 'searchfield',
             margin: '0 5 0 0',
             style: {
@@ -63,12 +64,13 @@ Ext.define('MyApp.view.handbook.header.Header', {
             listeners: {
                 change: {
                     fn: 'onSearchFieldChange',
-                    buffer: 250
+                    buffer: 450
                 }
             }
         },
         {
             xtype: 'button',
+            handler: 'onClearSearch',
             text: 'Clear'
         }
     ]

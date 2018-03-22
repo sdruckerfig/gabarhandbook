@@ -22,6 +22,10 @@ Ext.define('MyApp.view.handbook.header.HeaderViewController', {
         this.getView().fireEvent('textsearchchange',this.getView(),newValue,field);
 
 
+    },
+
+    onClearSearch: function(button, e) {
+        this.lookup('searchfield').setValue('');
     }
 
 });

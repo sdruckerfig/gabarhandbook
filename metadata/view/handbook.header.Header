@@ -75,6 +75,7 @@
                 "labelAlign": "top",
                 "layout|flex": 1,
                 "margin": "0 5 0 0",
+                "reference": "searchfield",
                 "style": [
                     "{",
                     "  'border-radius' : '5px'",
@@ -92,7 +93,8 @@
                 "layout|flex": "number",
                 "margin": "auto",
                 "style": "object",
-                "cls": "typedarray"
+                "cls": "typedarray",
+                "reference": "string"
             },
             "name": "MyTextField",
             "designerId": "c47bddec-aff3-46d4-94ec-e182d594aa92",
@@ -105,7 +107,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "buffer": 250,
+                        "buffer": 450,
                         "fn": "onSearchFieldChange",
                         "implHandler": [
                             "",
@@ -164,7 +166,36 @@
                 "text": "string"
             },
             "name": "MyButton1",
-            "designerId": "b201b889-4b82-4170-8482-5fcea7419e4a"
+            "designerId": "b201b889-4b82-4170-8482-5fcea7419e4a",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "button",
+                            "e"
+                        ],
+                        "designer|viewControllerFn": "onClearSearch",
+                        "fn": "handler",
+                        "implHandler": [
+                            "this.lookup('searchfield').setValue('');"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "designer|viewControllerFn": "string",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "handler",
+                    "designerId": "da7c145c-c973-4e14-ab7a-033dae7b1c09"
+                }
+            ]
         }
     ]
 }
