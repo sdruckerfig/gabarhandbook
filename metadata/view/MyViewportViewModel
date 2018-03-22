@@ -11,7 +11,8 @@
             " searchText: '',",
             " selectedNode: null,",
             " nextNode: null,",
-            " prevNode: null",
+            " prevNode: null,",
+            " multiSelectMode: false",
             "}"
         ],
         "designer|userAlias": "myviewport",

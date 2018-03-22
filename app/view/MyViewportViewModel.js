@@ -26,7 +26,8 @@ Ext.define('MyApp.view.MyViewportViewModel', {
         searchText: '',
         selectedNode: null,
         nextNode: null,
-        prevNode: null
+        prevNode: null,
+        multiSelectMode: false
     },
 
     stores: {

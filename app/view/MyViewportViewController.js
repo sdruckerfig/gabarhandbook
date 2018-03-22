@@ -55,7 +55,11 @@ Ext.define('MyApp.view.MyViewportViewController', {
     onChapterSelect: function(target, nodes) {
         var vm = this.getViewModel();
         var s = vm.get('TableOfContents');
-
+        if (nodes.length > 0) {
+            vm.set('multiSelectMode', true);
+        } else {
+            vm.set('multiSelectMode', false);
+        }
         var data = [];
 
         for (var i=0; i<nodes.length; i++) {

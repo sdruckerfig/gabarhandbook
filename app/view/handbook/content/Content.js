@@ -62,7 +62,7 @@ Ext.define('MyApp.view.handbook.content.Content', {
             cls: 'warning',
             dock: 'top',
             bind: {
-                hidden: '{!versionsAvailable}'
+                hidden: '{multiSelectMode || !versionsAvailable}'
             },
             items: [
                 {

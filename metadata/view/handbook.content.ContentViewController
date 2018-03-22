@@ -29,7 +29,7 @@
                 "fn": "initViewModel",
                 "implHandler": [
                     "vm.bind({",
-                    "    bindTo: '{selectedNode}', ",
+                    "    bindTo: '{selectedNode}',",
                     "    deep: true",
                     "}, this.onChangeSelection, this);",
                     ""
