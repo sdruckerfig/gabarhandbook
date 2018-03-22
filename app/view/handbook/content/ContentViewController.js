@@ -17,21 +17,50 @@ Ext.define('MyApp.view.handbook.content.ContentViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.mypanel11',
 
+    initViewModel: function(vm) {
+        vm.bind('{selectedNode}',this.onChangeSelection,this);
+    },
+
+    onChangeSelection: function(record) {
+        this.getViewModel().set('selectedVersion',null);
+
+        if (record) {
+            if (record.get('versions') && record.get('versions').length > 0) {
+                var s = this.getViewModel().get('ContentVersions');
+                s.removeAll();
+                s.add({
+                    id: 0,
+                    text: 'Current Version'
+                });
+                var versions = record.get('versions');
+                for (var i=0; i<versions.length; i++) {
+                    s.add({
+                        id: i+1,
+                        text: "Version " + versions[i].versionNumber
+                    });
+                }
+            }
+            this.getViewModel().set('selectedVersion',0);
+        }
+    },
+
     changeVersion: function(combo, record, eOpts) {
         var id = record.get('id');
         var dataRec =  this.getViewModel().get('selectedNode');
         var versions = dataRec.get('versions');
+
         if (id == 0) {
-            this.lookup('contentPnl').setData([{
+            this.getView().setData([{
                 title: dataRec.get('text'),
                 content: dataRec.get('content'),
-                depth: dataRec.get('depth')
+                depth: 4
             }]);
         } else {
-            this.lookup('contentPnl').setData([{
+            this.getView().setData([{
                 title: dataRec.get('text'),
                 content: versions[id - 1].content,
-                depth: dataRec.get('depth')
+                depth: 4
+
             }]);
         }
     }

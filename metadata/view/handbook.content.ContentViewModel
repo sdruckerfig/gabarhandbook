@@ -6,12 +6,122 @@
     },
     "codeClass": null,
     "userConfig": {
+        "data": [
+            "",
+            "{",
+            "  selectedVersionId: 0",
+            "}"
+        ],
         "designer|userAlias": "mypanel11",
         "designer|userClassName": "handbook.content.ContentViewModel"
     },
     "configAlternates": {
+        "data": "object",
         "designer|userAlias": "string",
         "designer|userClassName": "string"
     },
-    "designerId": "6ce09ffe-fdca-4c2b-8a8c-6ba8d4823a5e"
+    "designerId": "6ce09ffe-fdca-4c2b-8a8c-6ba8d4823a5e",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ContentVersions"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyStore",
+            "designerId": "87f7ad5e-7b68-469a-ba97-71624e9a27d6",
+            "cn": [
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "id"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField",
+                    "designerId": "bff0ab04-37bb-4065-9b69-3cffa819e415"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "text"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField1",
+                    "designerId": "127177ce-af7a-448a-889d-f264376c5653"
+                }
+            ]
+        },
+        {
+            "type": "Ext.app.bind.Formula",
+            "reference": {
+                "name": "formulas",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "versionsAvailable"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyFormula",
+            "designerId": "9de4fcd3-ff24-4212-aa39-958044af338a",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "get"
+                        ],
+                        "fn": "get",
+                        "implHandler": [
+                            "var selectedNode = get('selectedNode');",
+                            "if (!selectedNode) {",
+                            "    return false;",
+                            "}",
+                            "versions = selectedNode.get('versions');;",
+                            "if (versions &&  versions.length > 0) {",
+                            "    return true;",
+                            "} else {",
+                            "    return false;",
+                            "}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "get",
+                    "designerId": "801283ac-2f80-45e0-9a77-f8589438448a"
+                }
+            ]
+        }
+    ]
 }

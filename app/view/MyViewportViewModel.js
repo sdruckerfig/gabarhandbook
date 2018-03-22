@@ -19,9 +19,7 @@ Ext.define('MyApp.view.MyViewportViewModel', {
 
     requires: [
         'Ext.data.TreeStore',
-        'Ext.data.proxy.Ajax',
-        'Ext.app.bind.Formula',
-        'Ext.data.field.Field'
+        'Ext.data.proxy.Ajax'
     ],
 
     data: {
@@ -38,31 +36,11 @@ Ext.define('MyApp.view.MyViewportViewModel', {
             filterer: 'bottomup',
             proxy: {
                 type: 'ajax',
-                url: 'http://dev.gabar.org/handbook/components/Handbook.cfc?method=get'
-            }
-        },
-        ContentVersions: {
-            fields: [
-                {
-                    name: 'id'
-                },
-                {
-                    name: 'text'
-                }
-            ]
-        }
-    },
-    formulas: {
-        versionsAvailable: function(get) {
-            var selectedNode = get('selectedNode');
-            if (!selectedNode) {
-                return false;
-            }
-            versions = selectedNode.get('versions');;
-            if (versions &&  versions.length > 0) {
-                return true;
-            } else {
-                return false;
+                url: 'https://dev.gabar.org/handbook/components/Handbook.cfc?method=get'
+            },
+            listeners: {
+                beforeload: 'onTreeStoreBeforeLoad',
+                load: 'onTreeStoreLoad'
             }
         }
     }

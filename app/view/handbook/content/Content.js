@@ -74,12 +74,14 @@ Ext.define('MyApp.view.handbook.content.Content', {
                 },
                 {
                     xtype: 'combobox',
-                    width: 200,
+                    width: 150,
+                    editable: false,
                     emptyText: 'Select Version',
                     forceSelection: true,
                     queryMode: 'local',
                     valueField: 'id',
                     bind: {
+                        value: '{selectedVersionId}',
                         store: '{ContentVersions}'
                     },
                     listeners: {

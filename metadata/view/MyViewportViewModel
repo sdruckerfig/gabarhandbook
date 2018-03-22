@@ -53,114 +53,91 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "url": "http://dev.gabar.org/handbook/components/Handbook.cfc?method=get"
+                        "url": "https://dev.gabar.org/handbook/components/Handbook.cfc?method=get"
                     },
                     "configAlternates": {
                         "url": "string"
                     },
                     "name": "MyAjaxProxy",
                     "designerId": "84758ee1-0fa5-4c4d-a8c2-e3948f63bafd"
-                }
-            ]
-        },
-        {
-            "type": "Ext.app.bind.Formula",
-            "reference": {
-                "name": "formulas",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "versionsAvailable"
-            },
-            "configAlternates": {
-                "name": "string"
-            },
-            "name": "MyFormula",
-            "designerId": "f46eb837-4611-476e-aa23-5fdd984ed3e1",
-            "cn": [
-                {
-                    "type": "fixedfunction",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|params": [
-                            "get"
-                        ],
-                        "fn": "get",
-                        "implHandler": [
-                            "var selectedNode = get('selectedNode');",
-                            "if (!selectedNode) {",
-                            "    return false;",
-                            "}",
-                            "versions = selectedNode.get('versions');;",
-                            "if (versions &&  versions.length > 0) {",
-                            "    return true;",
-                            "} else {",
-                            "    return false;",
-                            "}"
-                        ]
-                    },
-                    "configAlternates": {
-                        "designer|params": "typedarray",
-                        "fn": "string",
-                        "implHandler": "code"
-                    },
-                    "name": "get",
-                    "designerId": "801283ac-2f80-45e0-9a77-f8589438448a"
-                }
-            ]
-        },
-        {
-            "type": "Ext.data.Store",
-            "reference": {
-                "name": "stores",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "ContentVersions"
-            },
-            "configAlternates": {
-                "name": "string"
-            },
-            "name": "MyStore",
-            "designerId": "8315c23b-fe35-427b-970b-401376fe2282",
-            "cn": [
-                {
-                    "type": "Ext.data.field.Field",
-                    "reference": {
-                        "name": "fields",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "name": "id"
-                    },
-                    "configAlternates": {
-                        "name": "string"
-                    },
-                    "name": "MyField",
-                    "designerId": "bff0ab04-37bb-4065-9b69-3cffa819e415"
                 },
                 {
-                    "type": "Ext.data.field.Field",
+                    "type": "viewcontrollereventbinding",
                     "reference": {
-                        "name": "fields",
+                        "name": "listeners",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "name": "text"
+                        "fn": "onTreeStoreBeforeLoad",
+                        "implHandler": [
+                            "this.getView().setLoading(true);"
+                        ],
+                        "name": "beforeload",
+                        "scope": "me"
                     },
                     "configAlternates": {
-                        "name": "string"
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
                     },
-                    "name": "MyField1",
-                    "designerId": "127177ce-af7a-448a-889d-f264376c5653"
+                    "name": "onTreeStoreBeforeLoad",
+                    "designerId": "d8e3604c-07f0-4c0c-b169-5948a636e7f3"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onTreeStoreLoad",
+                        "implHandler": [
+                            "",
+                            "Ext.Ajax.request({",
+                            "    url: 'https://dev.gabar.org/handbook/components/HandbookRuleVersion.cfc?method=get',",
+                            "    success: function(req,res) {",
+                            "        var versions = Ext.decode(req.responseText);",
+                            "        var root = treestore.getRoot();",
+                            "        for (var i=0; i<versions.length; i++) {",
+                            "            var node = root.findChild('id','rule' + versions[i].parentId , true);",
+                            "           ",
+                            "            if (node) {",
+                            "                if (!node.get('versions')) {",
+                            "                    node.set('versions',[]);",
+                            "                }",
+                            "                var nodeVersions = node.get('versions');",
+                            "                nodeVersions.push({",
+                            "                  \"text\" : versions[i].name,",
+                            "                  \"versionNumber\" : versions[i].version,",
+                            "                  \"content\" : versions[i].bodyText",
+                            "                });",
+                            "                node.set('versions',nodeVersions);",
+                            "            }",
+                            "        }",
+                            "        this.getView().setLoading(false);",
+                            "",
+                            "    },",
+                            "    failure: function(req,res) {",
+                            "        Ext.Msg.alert(\"Error\",\"Could not get rule versions. Please try again later.\");",
+                            "    },",
+                            "    scope: this",
+                            "});",
+                            ""
+                        ],
+                        "name": "load",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onTreeStoreLoad",
+                    "designerId": "eb8803de-6ff4-464b-9ad1-96cbf932add7"
                 }
             ]
         }

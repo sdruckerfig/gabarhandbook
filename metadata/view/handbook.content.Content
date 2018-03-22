@@ -171,6 +171,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "editable": false,
                         "emptyText": "Select Version",
                         "fieldLabel": null,
                         "forceSelection": true,
@@ -179,8 +180,11 @@
                         "store": [
                             "{ContentVersions}"
                         ],
+                        "value": [
+                            "{selectedVersionId}"
+                        ],
                         "valueField": "id",
-                        "width": 200
+                        "width": 150
                     },
                     "configAlternates": {
                         "store": "binding",
@@ -190,7 +194,9 @@
                         "layout|flex": "number",
                         "queryMode": "string",
                         "valueField": "datafield",
-                        "width": "auto"
+                        "width": "auto",
+                        "value": "binding",
+                        "editable": "boolean"
                     },
                     "name": "MyComboBox",
                     "designerId": "79fe4eed-9184-4d52-bfa0-81f6eb7d773c",
@@ -208,17 +214,19 @@
                                     "var id = record.get('id');",
                                     "var dataRec =  this.getViewModel().get('selectedNode');",
                                     "var versions = dataRec.get('versions');",
+                                    "",
                                     "if (id == 0) {",
-                                    "    this.lookup('contentPnl').setData([{",
+                                    "    this.getView().setData([{",
                                     "                    title: dataRec.get('text'),",
                                     "                    content: dataRec.get('content'),",
-                                    "                    depth: dataRec.get('depth')",
+                                    "                    depth: 4",
                                     "    }]);",
                                     "} else {",
-                                    "     this.lookup('contentPnl').setData([{",
+                                    "     this.getView().setData([{",
                                     "                    title: dataRec.get('text'),",
                                     "                    content: versions[id - 1].content,",
-                                    "                    depth: dataRec.get('depth')",
+                                    "                    depth: 4",
+                                    "",
                                     "    }]);",
                                     "}"
                                 ],

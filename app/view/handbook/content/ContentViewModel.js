@@ -15,6 +15,43 @@
 
 Ext.define('MyApp.view.handbook.content.ContentViewModel', {
     extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.mypanel11'
+    alias: 'viewmodel.mypanel11',
+
+    requires: [
+        'Ext.data.Store',
+        'Ext.data.field.Field',
+        'Ext.app.bind.Formula'
+    ],
+
+    data: {
+        selectedVersionId: 0
+    },
+
+    stores: {
+        ContentVersions: {
+            fields: [
+                {
+                    name: 'id'
+                },
+                {
+                    name: 'text'
+                }
+            ]
+        }
+    },
+    formulas: {
+        versionsAvailable: function(get) {
+            var selectedNode = get('selectedNode');
+            if (!selectedNode) {
+                return false;
+            }
+            versions = selectedNode.get('versions');;
+            if (versions &&  versions.length > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
 
 });

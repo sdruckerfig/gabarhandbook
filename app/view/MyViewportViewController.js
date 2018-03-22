@@ -105,10 +105,18 @@ Ext.define('MyApp.view.MyViewportViewController', {
             });
         }
 
+
+        // find first matching id
+        if (store.getCount() > 0) {
+          var node = store.getAt(0);
+          this.redirectTo('handbook/' + node.get('id'));
+        }
+
         var contentPnl = this.lookup('contentPnl');
         var data = contentPnl.getData(data);
         contentPnl.setData(data);
         this.highlightTerms();
+
     },
 
     highlightTerms: function() {
@@ -193,21 +201,6 @@ Ext.define('MyApp.view.MyViewportViewController', {
             this.highlightTerms();
         }
 
-        if (record.get('versions') && record.get('versions').length > 0) {
-            var s = this.getViewModel().get('ContentVersions');
-            s.removeAll(true);
-            s.add({
-                id: 0,
-                text: 'Current Version'
-            });
-            var versions = record.get('versions');
-            for (var i=0; i<versions.length; i++) {
-                s.add({
-                    id: i+1,
-                    text: versions[i].title
-                });
-            }
-        }
 
         vm.set('nextNode',this.getNextNode(record));
         vm.set('prevNode',this.getPrevNode(record));
@@ -298,6 +291,44 @@ Ext.define('MyApp.view.MyViewportViewController', {
     },
 
     onViewportAfterRender: function(component, eOpts) {
+
+    },
+
+    onTreeStoreBeforeLoad: function(store, operation, eOpts) {
+        this.getView().setLoading(true);
+    },
+
+    onTreeStoreLoad: function(treestore, records, successful, operation, node, eOpts) {
+
+        Ext.Ajax.request({
+            url: 'https://dev.gabar.org/handbook/components/HandbookRuleVersion.cfc?method=get',
+            success: function(req,res) {
+                var versions = Ext.decode(req.responseText);
+                var root = treestore.getRoot();
+                for (var i=0; i<versions.length; i++) {
+                    var node = root.findChild('id','rule' + versions[i].parentId , true);
+
+                    if (node) {
+                        if (!node.get('versions')) {
+                            node.set('versions',[]);
+                        }
+                        var nodeVersions = node.get('versions');
+                        nodeVersions.push({
+                            "text" : versions[i].name,
+                            "versionNumber" : versions[i].version,
+                            "content" : versions[i].bodyText
+                        });
+                        node.set('versions',nodeVersions);
+                    }
+                }
+                this.getView().setLoading(false);
+
+            },
+            failure: function(req,res) {
+                Ext.Msg.alert("Error","Could not get rule versions. Please try again later.");
+            },
+            scope: this
+        });
 
     }
 
