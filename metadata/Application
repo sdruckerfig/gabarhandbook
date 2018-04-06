@@ -12,7 +12,7 @@
         "defaultToken": "home",
         "name": "MyApp",
         "views": [
-            "MyViewport",
+            "MainContainer",
             "handbook.navigation.Navigation",
             "handbook.header.Header",
             "handbook.content.Content",
@@ -26,5 +26,30 @@
         "defaultToken": "string"
     },
     "name": "Application",
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var mainContainer = Ext.create('MyApp.view.MainContainer');",
+                    "Ext.get('handbook').on('resize', function(obj,e) {",
+                    "   mainContainer.setWidth(e.width);",
+                    "},this,{buffer: 250});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "launch",
+            "designerId": "70da0529-5df9-4034-b074-93b2a36e97ad"
+        }
+    ]
 }
