@@ -19,19 +19,28 @@ Ext.Loader.setConfig({
 });
 
 
+Ext.Loader.setPath('Ext.ux.form.TinyMceTextArea','packages/TinyMCE/src/TinyMceTextArea.js');
+
 Ext.application({
+    models: [
+        'Rule'
+    ],
     views: [
         'MainContainer',
         'handbook.navigation.Navigation',
-        'handbook.header.Header',
         'handbook.content.Content',
-        'handbook.navigation.Buttonbar'
+        'handbook.navigation.Buttonbar',
+        'ContentEditor'
     ],
     controllers: [
         'Main'
     ],
     defaultToken: 'home',
     name: 'MyApp',
+
+    requires: [
+        'MyApp.view.override.Element'
+    ],
 
     launch: function() {
         var mainContainer = Ext.create('MyApp.view.MainContainer');

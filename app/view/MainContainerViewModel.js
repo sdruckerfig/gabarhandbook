@@ -31,7 +31,8 @@ Ext.define('MyApp.view.MainContainerViewModel', {
         selectedNodes: [
             
         ],
-        selectedNodeId: ''
+        selectedNodeId: '',
+        isEditor: true
     },
 
     stores: {

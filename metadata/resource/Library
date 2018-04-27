@@ -10,7 +10,9 @@
         "designer|userClassName": "Library",
         "libraryRequires": [
             "font-awesome",
-            "ux"
+            "ux",
+            "ext-ux",
+            "TinyMCE"
         ],
         "theme": "MyTritonTheme1"
     },

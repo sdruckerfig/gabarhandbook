@@ -1,0 +1,24 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "",
+            "{",
+            " record: null",
+            "}"
+        ],
+        "designer|userAlias": "contenteditor",
+        "designer|userClassName": "ContentEditorViewModel"
+    },
+    "configAlternates": {
+        "data": "object",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "79fbfc98-4243-4ce2-b03f-f1d90577d3c3"
+}

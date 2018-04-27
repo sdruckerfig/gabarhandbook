@@ -102,10 +102,10 @@ Ext.define('MyApp.view.MainContainerViewController', {
         this.getViewModel().set('searchText',searchterm);
         store.clearFilter();
         if (!Ext.isEmpty(searchterm)) {
-            var regExp = new RegExp(searchterm,'gi');
+
+            var regExp = new RegExp(Ext.util.Format.escapeRegex(searchterm),'gi');
             store.filterBy(function(rec) {
-               var content =  rec.get('text') + ' ' + rec.get('content');
-               if (regExp.exec(content)) {
+               if (regExp.test(rec.get('text')) || rec.get('text').toUpperCase().indexOf(searchterm.toUpperCase()) >= 0 || regExp.test(rec.get('content'))) {
                    return true;
                } else {
                    return false;
@@ -135,7 +135,7 @@ Ext.define('MyApp.view.MainContainerViewController', {
         var tagsRe= /<[^>]*>/gm;
         var tagsProtect= '\x0f';
 
-        var searchRegExp = new RegExp(searchValue, 'gi');
+        var searchRegExp = new RegExp(Ext.util.Format.escapeRegex(searchValue), 'gi');
         var indexes = [];
         var count = 0;
         var currentIndex = 0;

@@ -1,0 +1,107 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Rule"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "f9f183db-53ab-4b01-91af-15b911dcabd6",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger",
+            "designerId": "b9fe2dfe-0590-4ddd-827d-991f98628d1c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField3",
+            "designerId": "3958ac1d-8be8-4295-8167-cb520d2d33bc"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "bodyText"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField4",
+            "designerId": "6602481f-eb03-43eb-9dbb-ee62ed2a2ee0"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "activeYn"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyInteger1",
+            "designerId": "0424bd76-12d5-42f5-8eb4-d5778f0e8178"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "  'create' : 'https://dev.gabar.org/handbook/components/HandbookRule.cfc?method=insertRecord',",
+                    "  'read' : 'https://dev.gabar.org/handbook/components/HandbookRule.cfc?method=read',",
+                    "  'update' : 'https://dev.gabar.org/handbook/components/HandbookRule.cfc?method=update',",
+                    "  'destroy' : 'https://dev.gabar.org/handbook/components/HandbookRule.cfc?method=delete'",
+                    "}"
+                ],
+                "withCredentials": true
+            },
+            "configAlternates": {
+                "api": "object",
+                "withCredentials": "boolean"
+            },
+            "name": "MyAjaxProxy1",
+            "designerId": "ad6e7acb-fc52-4342-a194-a1d453cf92d2"
+        }
+    ]
+}

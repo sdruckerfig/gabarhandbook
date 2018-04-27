@@ -22,7 +22,6 @@ Ext.define('MyApp.view.MainContainer', {
         'MyApp.view.MainContainerViewController',
         'MyApp.view.handbook.navigation.Navigation',
         'MyApp.view.handbook.content.Content',
-        'MyApp.view.handbook.header.Header',
         'Ext.tree.Panel'
     ],
 
@@ -31,7 +30,7 @@ Ext.define('MyApp.view.MainContainer', {
         type: 'maincontainer'
     },
     border: true,
-    height: 600,
+    height: '100%',
     renderTo: 'handbook',
     width: '100%',
     layout: 'border',
@@ -47,12 +46,6 @@ Ext.define('MyApp.view.MainContainer', {
             xtype: 'displaycontent',
             region: 'east',
             split: true
-        },
-        {
-            xtype: 'navigationheader',
-            height: 220,
-            hidden: true,
-            region: 'north'
         }
     ]
 

@@ -13,5 +13,27 @@
         "designer|userAlias": "string",
         "designer|userClassName": "string"
     },
-    "designerId": "141e2599-2c50-4470-98e3-d4c5a94ad93d"
+    "designerId": "141e2599-2c50-4470-98e3-d4c5a94ad93d",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rec"
+                ],
+                "fn": "onContentEdited"
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string"
+            },
+            "name": "onContentEdited",
+            "designerId": "8d00dc87-68a1-41da-85c2-c91c35774e44"
+        }
+    ]
 }

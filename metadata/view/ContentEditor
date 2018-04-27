@@ -1,0 +1,190 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "callback": "`null`",
+        "contentId": "`null`",
+        "designer|userAlias": "contenteditor",
+        "designer|userClassName": "ContentEditor",
+        "height": 600,
+        "layout": "fit",
+        "maximizable": true,
+        "modal": true,
+        "scope": "`null`",
+        "title": "Edit Content",
+        "width": 800
+    },
+    "configAlternates": {
+        "autoShow": "boolean",
+        "callback": "string",
+        "contentId": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "maximizable": "boolean",
+        "modal": "boolean",
+        "scope": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "a485dc60-d36b-431b-9933-4ee75fc70eea",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "callback",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "scope",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "contentId",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "ecee4404-0e76-4c1d-a62e-082e5e2dc276",
+    "viewModelInstanceId": "79fbfc98-4243-4ce2-b03f-f1d90577d3c3",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "header": false,
+                "title": "My Form"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "header": "boolean",
+                "title": "string"
+            },
+            "name": "MyForm",
+            "designerId": "35a32c88-1158-43fc-a8c7-d426ff78d755",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Title",
+                        "layout|anchor": "100%"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "f965a1fa-0f7b-4d09-aae3-f5d3af5dfcc0"
+                },
+                {
+                    "type": "Ext.ux.form.TinyMceTextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Content",
+                        "formattingToolbar": "undo redo | bold italic underline strikethrough superscript subscript | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat",
+                        "labelAlign": "top",
+                        "layout|anchor": "100% -40",
+                        "libraryUrl": "https://cloud.tinymce.com/stable/tinymce.min.js",
+                        "plugin_fullscreen": true,
+                        "plugin_paste": true,
+                        "showFormattingToolbar": true,
+                        "spellchecker_language": "en",
+                        "statusbar": true
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "formattingToolbar": "string",
+                        "labelAlign": "string",
+                        "layout|anchor": "string",
+                        "libraryUrl": "uri",
+                        "plugin_fullscreen": "boolean",
+                        "plugin_paste": "boolean",
+                        "showFormattingToolbar": "boolean",
+                        "spellchecker_language": "string",
+                        "statusbar": "boolean"
+                    },
+                    "name": "MyTinyMceEditor",
+                    "designerId": "cfecb6e5-23b0-409c-b60a-e7e7ba87af92"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "save"
+            },
+            "configAlternates": {
+                "type": "string"
+            },
+            "name": "MyTool4",
+            "designerId": "590e9ac5-6ed4-4245-9fd7-e4d310445833"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "delay": 250,
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    "var view = this.getView();",
+                    "view.setLoading(true);",
+                    "",
+                    "var contentId = view.getContentId().substring(4);",
+                    "MyApp.model.Rule.load(view.getContentId(), {",
+                    "    success: function(rec,res) {",
+                    "        view.setLoading(false);",
+                    "        vm.set('record',rec);",
+                    "    },",
+                    "    failure: function(rec,res) {",
+                    "        view.setLoading(false);",
+                    "        Ext.Msg.alert(\"Error\",\"Could not read data from server.\");",
+                    "        view.close();",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "delay": "number",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "adfd596a-0733-489a-a732-4a73d44aabc2"
+        }
+    ]
+}

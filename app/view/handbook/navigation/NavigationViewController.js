@@ -17,15 +17,33 @@ Ext.define('MyApp.view.handbook.navigation.NavigationViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.handbooktreenav',
 
+    onContentEdited: function(rec) {
+
+    },
+
     onSearchFieldChange: function(field, newValue, oldValue, eOpts) {
 
-        this.getView().fireEvent('textsearchchange',this.getView(),newValue,field);
+        // this.getView().fireEvent('textsearchchange',this.getView(),newValue,field);
 
 
     },
 
+    onTextfieldSpecialkey: function(field, e, eOpts) {
+
+        if (e.getKey() == e.ENTER) {
+            this.onSearch();
+        }
+
+    },
+
+    onSearch: function(button, e) {
+        var searchfield = this.lookup('searchfield');
+        this.getView().fireEvent('textsearchchange',this.getView(),searchfield.getValue(),searchfield);
+    },
+
     onClearSearch: function(button, e) {
         this.lookup('searchfield').setValue('');
+        this.onSearch();
     },
 
     onExpandAll: function(owner, tool, event) {
@@ -48,6 +66,17 @@ Ext.define('MyApp.view.handbook.navigation.NavigationViewController', {
 
     onTreepanelSelect: function(rowmodel, record, index, eOpts) {
         this.redirectTo('handbook/' + record.get('id'));
+    },
+
+    onTreepanelItemDblClick: function(dataview, record, item, index, e, eOpts) {
+        var vm = this.getViewModel();
+        if (vm.get('isEditor')) {
+            Ext.widget('contenteditor', {
+                scope: this,
+                callback: this.onContentEdited,
+                contentId: record.get('id')
+            });
+        }
     }
 
 });

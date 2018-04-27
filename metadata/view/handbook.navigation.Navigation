@@ -108,7 +108,7 @@
                                 "fn": "onSearchFieldChange",
                                 "implHandler": [
                                     "",
-                                    "this.getView().fireEvent('textsearchchange',this.getView(),newValue,field);",
+                                    "// this.getView().fireEvent('textsearchchange',this.getView(),newValue,field);",
                                     "",
                                     ""
                                 ],
@@ -124,6 +124,82 @@
                             },
                             "name": "onSearchFieldChange",
                             "designerId": "e07b5de5-5044-4cf6-a4c0-31b7997ba3ab"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTextfieldSpecialkey",
+                                "implHandler": [
+                                    "",
+                                    "if (e.getKey() == e.ENTER) {",
+                                    "   this.onSearch();",
+                                    "}",
+                                    "              "
+                                ],
+                                "name": "specialkey",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onTextfieldSpecialkey",
+                            "designerId": "1ad5afa9-380c-4d2a-aa0e-470398fcceb3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Search"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "324ab36e-6e3f-4797-b557-c44df180f114",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "designer|viewControllerFn": "onSearch",
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var searchfield = this.lookup('searchfield');",
+                                    "this.getView().fireEvent('textsearchchange',this.getView(),searchfield.getValue(),searchfield);"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "designer|viewControllerFn": "string",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "handler",
+                            "designerId": "3e8cad52-de65-4e7b-9ab9-7750b9aa4609"
                         }
                     ]
                 },
@@ -160,7 +236,8 @@
                                 "designer|viewControllerFn": "onClearSearch",
                                 "fn": "handler",
                                 "implHandler": [
-                                    "this.lookup('searchfield').setValue('');"
+                                    "this.lookup('searchfield').setValue('');",
+                                    "this.onSearch();"
                                 ]
                             },
                             "configAlternates": {
@@ -344,15 +421,24 @@
             },
             "codeClass": null,
             "userConfig": {
+                "hidden": true,
                 "tooltip": "Help",
                 "type": "help"
             },
             "configAlternates": {
                 "tooltip": "string",
-                "type": "string"
+                "type": "string",
+                "hidden": "boolean"
             },
             "name": "MyTool3",
-            "designerId": "321242c1-7e0a-4c86-b9e6-9e54287ae041"
+            "designerId": "321242c1-7e0a-4c86-b9e6-9e54287ae041",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "hidden",
+                    "type": "boolean"
+                }
+            ]
         },
         {
             "type": "linkedinstance",
@@ -370,6 +456,37 @@
             "name": "handbook.navigation.buttonbar",
             "designerId": "623be921-ad42-4365-b291-59eae878eec1",
             "masterInstanceId": "1f21545c-e9d7-43fe-9ac2-9d0743e193ca"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreepanelItemDblClick",
+                "implHandler": [
+                    "var vm = this.getViewModel();",
+                    "if (vm.get('isEditor')) {",
+                    "    Ext.widget('contenteditor', {",
+                    "        scope: this,",
+                    "        callback: this.onContentEdited,",
+                    "        contentId: record.get('id')",
+                    "    });",
+                    "}"
+                ],
+                "name": "itemdblclick",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onTreepanelItemDblClick",
+            "designerId": "e2f24030-6d6e-4366-ab7b-bf51bbd29517"
         }
     ]
 }

@@ -9,7 +9,7 @@
         "border": true,
         "designer|userAlias": "maincontainer",
         "designer|userClassName": "MainContainer",
-        "height": 600,
+        "height": "100%",
         "layout": "border",
         "renderTo": "handbook",
         "width": "100%"
@@ -69,27 +69,6 @@
             "name": "handbook.content.content",
             "designerId": "020a7a12-9654-41b9-b424-287bdd87d0ce",
             "masterInstanceId": "3215971f-2bae-443d-a648-2103745d90f5"
-        },
-        {
-            "type": "linkedinstance",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": 220,
-                "hidden": true,
-                "layout|region": "north"
-            },
-            "configAlternates": {
-                "layout|region": "string",
-                "height": "auto",
-                "hidden": "boolean"
-            },
-            "name": "handbook.header.header",
-            "designerId": "5398494b-b077-4ded-a22d-8e3a00db2901",
-            "masterInstanceId": "5c88611a-fbf5-414f-ab16-5f6e757ae4da"
         }
     ]
 }

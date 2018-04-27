@@ -29,16 +29,27 @@ Ext.define('MyApp.view.override.Panel', {
         // instantiate application stylesheets in the hidden iframe
 
         var stylesheets = "";
+        /*
         for (var i = 0; i < document.styleSheets.length; i++) {
             stylesheets += Ext.String.format('<link rel="stylesheet" href="{0}" />', document.styleSheets[i].href);
         }
+        */
 
         // various style overrides
         stylesheets += ''.concat(
             "<style>",
-            ".x-panel-body {overflow: visible !important;}",
+          //   ".x-panel-body {overflow: visible !important;}",
             // experimental - page break after embedded panels
             // .x-panel {page-break-after: always; margin-top: 10px}",
+
+            '.handbookNewBodyStyle ol {list-style-type: none !important; margin: 0 !important;}',
+            '.handbookNewBodyStyle ol li:before  { content: "(" counter(section, lower-alpha) ") "; letter-spacing: 1px; }',
+            '.handbookNewBodyStyle ol li { counter-increment: section; }',
+            '.handbookNewBodyStyle ol ol {list-style-type: none !important;}',
+            '.handbookNewBodyStyle ol ol li:before { content: "(" counter(section, decimal) ") "; }',
+            '.handbookNewBodyStyle ol ol li:first-of-type { counter-reset: section; }',
+            '.handbookNewBodyStyle ol ol ol { list-style-type: none !important; }',
+            '.handbookNewBodyStyle  ol ol ol li:before { content: "(" counter(section, lower-roman) ") "; }',
             "</style>"
         );
 
@@ -49,7 +60,7 @@ Ext.define('MyApp.view.override.Panel', {
             markup = markup.replace('overflow: auto;', '');
         }
 
-        var str = Ext.String.format('<html><head>{0}</head><body><img src="resources/images/gabar-logo.gif">{1}</body></html>', '', markup);
+        var str = Ext.String.format('<html><head>{0}</head><body><img src="resources/images/gabar-logo.gif">{1}</body></html>', stylesheets, markup);
 
         // output to the iframe
         cw.document.open();

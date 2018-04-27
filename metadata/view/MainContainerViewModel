@@ -14,7 +14,8 @@
             " prevNode: null,",
             " multiSelectMode: false,",
             " selectedNodes: [],",
-            " selectedNodeId: ''",
+            " selectedNodeId: '',",
+            " isEditor: true",
             "}"
         ],
         "designer|userAlias": "maincontainer",

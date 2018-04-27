@@ -67,8 +67,14 @@ Ext.define('MyApp.view.handbook.navigation.Navigation', {
                         change: {
                             fn: 'onSearchFieldChange',
                             buffer: 450
-                        }
+                        },
+                        specialkey: 'onTextfieldSpecialkey'
                     }
+                },
+                {
+                    xtype: 'button',
+                    handler: 'onSearch',
+                    text: 'Search'
                 },
                 {
                     xtype: 'button',
@@ -97,13 +103,15 @@ Ext.define('MyApp.view.handbook.navigation.Navigation', {
         },
         {
             xtype: 'tool',
+            hidden: true,
             tooltip: 'Help',
             type: 'help'
         }
     ],
     listeners: {
         checkchange: 'onTreepanelCheckChange',
-        select: 'onTreepanelSelect'
+        select: 'onTreepanelSelect',
+        itemdblclick: 'onTreepanelItemDblClick'
     }
 
 });

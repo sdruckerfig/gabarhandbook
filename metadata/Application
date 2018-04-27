@@ -10,20 +10,28 @@
             "Main"
         ],
         "defaultToken": "home",
+        "models": [
+            "Rule"
+        ],
         "name": "MyApp",
+        "requires": [
+            "MyApp.view.override.Element"
+        ],
         "views": [
             "MainContainer",
             "handbook.navigation.Navigation",
-            "handbook.header.Header",
             "handbook.content.Content",
-            "handbook.navigation.Buttonbar"
+            "handbook.navigation.Buttonbar",
+            "ContentEditor"
         ]
     },
     "configAlternates": {
         "name": "string",
         "views": "typedarray",
         "controllers": "typedarray",
-        "defaultToken": "string"
+        "defaultToken": "string",
+        "requires": "typedarray",
+        "models": "typedarray"
     },
     "name": "Application",
     "designerId": "application",

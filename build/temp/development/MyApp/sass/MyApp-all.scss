@@ -965,6 +965,7 @@ $include-ext-ux-form-fileuploadfield: dynamic(true);;
 $include-ext-ux-form-itemselector: dynamic(true);;
 $include-ext-ux-form-multiselect: dynamic(true);;
 $include-ext-ux-form-searchfield: dynamic(true);;
+$include-ext-ux-form-tinymcetextarea: dynamic(true);;
 $include-ext-ux-grid-subtable: dynamic(true);;
 $include-ext-ux-grid-transformgrid: dynamic(true);;
 $include-ext-ux-grid-plugin-autoselector: dynamic(true);;
@@ -990,21 +991,23 @@ $include-ext-window-messagebox: dynamic(true);;
 $include-ext-window-toast: dynamic(true);;
 $include-ext-window-window: dynamic(true);;
 $include-myapp-controller-main: dynamic(true);;
+$include-myapp-model-rule: dynamic(true);;
+$include-myapp-view-contenteditor: dynamic(true);;
+$include-myapp-view-contenteditorviewcontroller: dynamic(true);;
+$include-myapp-view-contenteditorviewmodel: dynamic(true);;
 $include-myapp-view-maincontainer: dynamic(true);;
 $include-myapp-view-maincontainerviewcontroller: dynamic(true);;
 $include-myapp-view-maincontainerviewmodel: dynamic(true);;
 $include-myapp-view-handbook-content-content: dynamic(true);;
 $include-myapp-view-handbook-content-contentviewcontroller: dynamic(true);;
 $include-myapp-view-handbook-content-contentviewmodel: dynamic(true);;
-$include-myapp-view-handbook-header-header: dynamic(true);;
-$include-myapp-view-handbook-header-headerviewcontroller: dynamic(true);;
-$include-myapp-view-handbook-header-headerviewmodel: dynamic(true);;
 $include-myapp-view-handbook-navigation-buttonbar: dynamic(true);;
 $include-myapp-view-handbook-navigation-buttonbarviewcontroller: dynamic(true);;
 $include-myapp-view-handbook-navigation-buttonbarviewmodel: dynamic(true);;
 $include-myapp-view-handbook-navigation-navigation: dynamic(true);;
 $include-myapp-view-handbook-navigation-navigationviewcontroller: dynamic(true);;
 $include-myapp-view-handbook-navigation-navigationviewmodel: dynamic(true);;
+$include-myapp-view-override-element: dynamic(true);;
 $include-myapp-view-override-panel: dynamic(true);;
 $output-paths: ("path": "../resources");
 
@@ -1073,6 +1076,14 @@ $current-package: 'theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4';
 $current-resource-root: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-root;
 $relative-image-path-for-uis: $theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4-resource-path;
 @import '../../../../../packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/etc/all';
+
+/* including package TinyMCE */
+$TinyMCE-resource-root: 'TinyMCE' !default;
+$TinyMCE-resource-path: 'TinyMCE/images' !default;
+$current-package: 'TinyMCE';
+$current-resource-root: $TinyMCE-resource-root;
+$relative-image-path-for-uis: $TinyMCE-resource-path;
+@import '../../../../../packages/TinyMCE/sass/etc/all';
 
 
 /* ======================== VAR ======================== */
