@@ -57,7 +57,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "url": "https://dev.gabar.org/handbook/components/Handbook.cfc?method=get"
+                        "url": "https://www.gabar.org/handbook/components/Handbook.cfc?method=get"
                     },
                     "configAlternates": {
                         "url": "string"
@@ -101,13 +101,13 @@
                         "implHandler": [
                             "",
                             "Ext.Ajax.request({",
-                            "    url: 'https://dev.gabar.org/handbook/components/HandbookRuleVersion.cfc?method=get',",
+                            "    url: 'https://www.gabar.org/handbook/components/HandbookRuleVersion.cfc?method=get',",
                             "    success: function(req,res) {",
                             "        var versions = Ext.decode(req.responseText);",
                             "        var root = treestore.getRoot();",
                             "        for (var i=0; i<versions.length; i++) {",
                             "            var node = root.findChild('id','rule' + versions[i].parentId , true);",
-                            "           ",
+                            "",
                             "            if (node) {",
                             "                if (!node.get('versions')) {",
                             "                    node.set('versions',[]);",

@@ -34,23 +34,29 @@
 
 .handbookNewBodyStyle {
 
-    ol { 
-        list-style-type: none !important; 
-        margin: 0 !important; 
+    ol {
+        list-style-type: none !important;
+        margin: 0 !important;
     }
     ol li:before { content: "(" counter(section, lower-alpha) ") "; letter-spacing: 1px; }
     ol li { counter-increment: section; }
 
-    ol ol { 
-        list-style-type: none !important; 
+    ol ol {
+        list-style-type: none !important;
     }
     ol ol li:before { content: "(" counter(section, decimal) ") "; }
     ol ol li:first-of-type { counter-reset: section; }
 
-    ol ol ol { 
-        list-style-type: none !important; 
+    ol ol ol {
+        list-style-type: none !important;
     }
     ol ol ol li:before { content: "(" counter(section, lower-roman) ") "; }
+
+
+    ol ol ol ol { list-style-type: none !important;}
+	ol ol ol ol li:before { 
+        content: "(" counter(section, upper-alpha) ") ";
+    }
 }
 
 

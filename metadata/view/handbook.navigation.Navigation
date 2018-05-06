@@ -467,6 +467,7 @@
             "userConfig": {
                 "fn": "onTreepanelItemDblClick",
                 "implHandler": [
+                    "/*",
                     "var vm = this.getViewModel();",
                     "if (vm.get('isEditor')) {",
                     "    Ext.widget('contenteditor', {",
@@ -474,7 +475,8 @@
                     "        callback: this.onContentEdited,",
                     "        contentId: record.get('id')",
                     "    });",
-                    "}"
+                    "}",
+                    "*/"
                 ],
                 "name": "itemdblclick",
                 "scope": "me"
@@ -487,6 +489,91 @@
             },
             "name": "onTreepanelItemDblClick",
             "designerId": "e2f24030-6d6e-4366-ab7b-bf51bbd29517"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Maximize/Minimize",
+                "tooltip": "Toggle full screen view",
+                "type": "maximize"
+            },
+            "configAlternates": {
+                "type": "string",
+                "designer|displayName": "string",
+                "tooltip": "string"
+            },
+            "name": "MyTool5",
+            "designerId": "e3f6c08e-acdc-4a8f-96c6-a19e3c098070",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "owner",
+                            "tool",
+                            "event"
+                        ],
+                        "designer|viewControllerFn": "onMaximize",
+                        "fn": "callback",
+                        "implHandler": [
+                            "var maximized = this.getViewModel().get('isMaximized');",
+                            "if (!maximized) {",
+                            "    var v = Ext.ComponentQuery.query('maincontainer')[0];",
+                            "    Ext.create('Ext.Viewport', {",
+                            "      //  autoDestroy: false,",
+                            "        layout: 'fit',",
+                            "        items: [",
+                            "            v",
+                            "        ]",
+                            "    });",
+                            "    this.getViewModel().set('isMaximized',true);",
+                            "} else {",
+                            "",
+                            "    var v = Ext.ComponentQuery.query('maincontainer')[0];",
+                            "    Ext.ComponentQuery.query('viewport')[0].destroy();",
+                            "    //  this.getViewModel().set('isMaximized',false);",
+                            "    Ext.widget('maincontainer',{",
+                            "        renderTo: 'handbook',",
+                            "        listeners: {",
+                            "            afterrender: function(v) {",
+                            "",
+                            "              v.getController().redirectTo(location.hash.substring(1),{force: true});",
+                            "              ",
+                            "              Ext.get('handbook').on('resize', function(obj,e) {",
+                            "                v.setWidth(e.width);",
+                            "              },this,{buffer: 250});",
+                            "            }",
+                            "        }",
+                            "    });",
+                            "    // fixes bug in Ext JS when destroying viewport",
+                            "    Ext.getBody().applyStyles({",
+                            "        overflow: 'auto'",
+                            "    });",
+                            "",
+                            "",
+                            "}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "designer|viewControllerFn": "string",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "callback",
+                    "designerId": "6c97afaf-7cde-445a-b107-2e8a679eb67c"
+                }
+            ]
         }
     ]
 }

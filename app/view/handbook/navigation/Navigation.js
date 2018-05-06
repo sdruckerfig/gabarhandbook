@@ -106,6 +106,12 @@ Ext.define('MyApp.view.handbook.navigation.Navigation', {
             hidden: true,
             tooltip: 'Help',
             type: 'help'
+        },
+        {
+            xtype: 'tool',
+            callback: 'onMaximize',
+            tooltip: 'Toggle full screen view',
+            type: 'maximize'
         }
     ],
     listeners: {

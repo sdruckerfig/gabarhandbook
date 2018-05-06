@@ -69,14 +69,55 @@ Ext.define('MyApp.view.handbook.navigation.NavigationViewController', {
     },
 
     onTreepanelItemDblClick: function(dataview, record, item, index, e, eOpts) {
+        /*
         var vm = this.getViewModel();
         if (vm.get('isEditor')) {
-            Ext.widget('contenteditor', {
-                scope: this,
-                callback: this.onContentEdited,
-                contentId: record.get('id')
-            });
+        Ext.widget('contenteditor', {
+        scope: this,
+        callback: this.onContentEdited,
+        contentId: record.get('id')
+        });
         }
+        */
+    },
+
+    onMaximize: function(owner, tool, event) {
+        var maximized = this.getViewModel().get('isMaximized');
+        if (!maximized) {
+            var v = Ext.ComponentQuery.query('maincontainer')[0];
+            Ext.create('Ext.Viewport', {
+                //  autoDestroy: false,
+                layout: 'fit',
+                items: [
+                v
+                ]
+            });
+            this.getViewModel().set('isMaximized',true);
+        } else {
+
+            var v = Ext.ComponentQuery.query('maincontainer')[0];
+            Ext.ComponentQuery.query('viewport')[0].destroy();
+            //  this.getViewModel().set('isMaximized',false);
+            Ext.widget('maincontainer',{
+                renderTo: 'handbook',
+                listeners: {
+                    afterrender: function(v) {
+
+                        v.getController().redirectTo(location.hash.substring(1),{force: true});
+
+                        Ext.get('handbook').on('resize', function(obj,e) {
+                            v.setWidth(e.width);
+                        },this,{buffer: 250});
+                        }
+                    }
+                });
+                // fixes bug in Ext JS when destroying viewport
+                Ext.getBody().applyStyles({
+                    overflow: 'auto'
+                });
+
+
+            }
     }
 
 });

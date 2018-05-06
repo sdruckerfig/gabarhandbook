@@ -15,6 +15,10 @@
 
 Ext.define('MyApp.view.handbook.navigation.NavigationViewModel', {
     extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.handbook.navigation.navigation'
+    alias: 'viewmodel.handbook.navigation.navigation',
+
+    data: {
+        isMaximized: false
+    }
 
 });

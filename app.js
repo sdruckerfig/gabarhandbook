@@ -43,7 +43,10 @@ Ext.application({
     ],
 
     launch: function() {
-        var mainContainer = Ext.create('MyApp.view.MainContainer');
+
+        var mainContainer = Ext.create('MyApp.view.MainContainer', {
+            renderTo: 'handbook'
+        });
         Ext.get('handbook').on('resize', function(obj,e) {
            mainContainer.setWidth(e.width);
         },this,{buffer: 250});

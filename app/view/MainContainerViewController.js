@@ -305,7 +305,7 @@ Ext.define('MyApp.view.MainContainerViewController', {
     onTreeStoreLoad: function(treestore, records, successful, operation, node, eOpts) {
 
         Ext.Ajax.request({
-            url: 'https://dev.gabar.org/handbook/components/HandbookRuleVersion.cfc?method=get',
+            url: 'https://www.gabar.org/handbook/components/HandbookRuleVersion.cfc?method=get',
             success: function(req,res) {
                 var versions = Ext.decode(req.responseText);
                 var root = treestore.getRoot();

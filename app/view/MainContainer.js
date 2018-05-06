@@ -31,7 +31,6 @@ Ext.define('MyApp.view.MainContainer', {
     },
     border: true,
     height: '100%',
-    renderTo: 'handbook',
     width: '100%',
     layout: 'border',
 

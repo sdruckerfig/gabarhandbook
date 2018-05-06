@@ -50,6 +50,8 @@ Ext.define('MyApp.view.override.Panel', {
             '.handbookNewBodyStyle ol ol li:first-of-type { counter-reset: section; }',
             '.handbookNewBodyStyle ol ol ol { list-style-type: none !important; }',
             '.handbookNewBodyStyle  ol ol ol li:before { content: "(" counter(section, lower-roman) ") "; }',
+            '.handbookNewBodyStyle  ol ol ol ol { list-style-type: none !important;}',
+            '.handbookNewBodyStyle ol ol ol ol li:before { content: "(" counter(section, upper-alpha) ") ";}',
             "</style>"
         );
 
@@ -60,7 +62,7 @@ Ext.define('MyApp.view.override.Panel', {
             markup = markup.replace('overflow: auto;', '');
         }
 
-        var str = Ext.String.format('<html><head>{0}</head><body><img src="resources/images/gabar-logo.gif">{1}</body></html>', stylesheets, markup);
+        var str = Ext.String.format('<html><head><title>State Bar Handbook</title>{0}</head><body><img src="resources/images/gabar-logo.gif">{1}</body></html>', stylesheets, markup);
 
         // output to the iframe
         cw.document.open();
