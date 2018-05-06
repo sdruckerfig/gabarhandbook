@@ -6,12 +6,15 @@
 
 .x-livesearch-match {
     background-color: yellow;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .searchfield {
 
 }
-
+ 
 .x-tree-node-text {
     font-family: Verdana;
 }
@@ -54,7 +57,7 @@
 
 
     ol ol ol ol { list-style-type: none !important;}
-	ol ol ol ol li:before { 
+	ol ol ol ol li:before {
         content: "(" counter(section, upper-alpha) ") ";
     }
 }

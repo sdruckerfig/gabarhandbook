@@ -7566,66 +7566,69 @@
 /* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:7 */
 .x-livesearch-match {
     background-color: yellow;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: 0 8px 6px -6px black;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:15 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:18 */
 .x-tree-node-text {
     font-family: Verdana;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:19 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:22 */
 .topborder {
     border-top: 1px solid #23548d;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:23 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:26 */
 .warning {
     background-color: silver;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:27 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:30 */
 .deleted {
     text-decoration: line-through;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:31 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:34 */
 .added {
     background-color: yellow;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:37 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:40 */
 .handbookNewBodyStyle ol {
     list-style-type: none !important;
     margin: 0 !important;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:41 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:44 */
 .handbookNewBodyStyle ol li:before {
     content: "(" counter(section, lower-alpha) ") ";
     letter-spacing: 1px;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:42 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:45 */
 .handbookNewBodyStyle ol li {
     counter-increment: section;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:44 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:47 */
 .handbookNewBodyStyle ol ol {
     list-style-type: none !important;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:47 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:50 */
 .handbookNewBodyStyle ol ol li:before {
     content: "(" counter(section, decimal) ") ";
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:48 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:51 */
 .handbookNewBodyStyle ol ol li:first-of-type {
     counter-reset: section;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:50 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:53 */
 .handbookNewBodyStyle ol ol ol {
     list-style-type: none !important;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:53 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:56 */
 .handbookNewBodyStyle ol ol ol li:before {
     content: "(" counter(section, lower-roman) ") ";
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:56 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:59 */
 .handbookNewBodyStyle ol ol ol ol {
     list-style-type: none !important;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:57 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/Component.scss:60 */
 .handbookNewBodyStyle ol ol ol ol li:before {
     content: "(" counter(section, upper-alpha) ") ";
 }
@@ -7979,66 +7982,69 @@
 /* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:7 */
 .x-livesearch-match {
     background-color: yellow;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: 0 8px 6px -6px black;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:15 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:18 */
 .x-tree-node-text {
     font-family: Verdana;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:19 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:22 */
 .topborder {
     border-top: 1px solid #23548d;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:23 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:26 */
 .warning {
     background-color: silver;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:27 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:30 */
 .deleted {
     text-decoration: line-through;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:31 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:34 */
 .added {
     background-color: yellow;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:37 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:40 */
 .handbookNewBodyStyle ol {
     list-style-type: none !important;
     margin: 0 !important;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:41 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:44 */
 .handbookNewBodyStyle ol li:before {
     content: "(" counter(section, lower-alpha) ") ";
     letter-spacing: 1px;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:42 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:45 */
 .handbookNewBodyStyle ol li {
     counter-increment: section;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:44 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:47 */
 .handbookNewBodyStyle ol ol {
     list-style-type: none !important;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:47 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:50 */
 .handbookNewBodyStyle ol ol li:before {
     content: "(" counter(section, decimal) ") ";
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:48 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:51 */
 .handbookNewBodyStyle ol ol li:first-of-type {
     counter-reset: section;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:50 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:53 */
 .handbookNewBodyStyle ol ol ol {
     list-style-type: none !important;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:53 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:56 */
 .handbookNewBodyStyle ol ol ol li:before {
     content: "(" counter(section, lower-roman) ") ";
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:56 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:59 */
 .handbookNewBodyStyle ol ol ol ol {
     list-style-type: none !important;
 }
-/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:57 */
+/* /Library/WebServer/Documents/gabarhandbook/packages/local/theme-triton-b36699be-1e21-41ef-9b48-b0108f5c03e4/sass/src/_architect_src.scss:60 */
 .handbookNewBodyStyle ol ol ol ol li:before {
     content: "(" counter(section, upper-alpha) ") ";
 }
