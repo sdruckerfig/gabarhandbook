@@ -42,7 +42,7 @@ Ext.define('MyApp.view.MainContainerViewModel', {
             filterer: 'bottomup',
             proxy: {
                 type: 'ajax',
-                url: '/handbook/components/Handbook.cfc?method=get'
+                url: 'https://www.gabar.org/handbook/components/Handbook.cfc?method=get'
             },
             listeners: {
                 beforeload: 'onTreeStoreBeforeLoad',
